@@ -1,0 +1,109 @@
+.home {
+  &__header {
+    position: relative;
+    &__background {
+      position: absolute;
+      left: 0;
+      top: 30px;
+      width: 100%;
+      opacity: 0.7;
+    }
+    &__title {
+      padding: 40px;
+      font-family: 'Montserrat', sans-serif;
+      margin-top: auto;
+      margin-bottom: auto;
+      padding-top: 400px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: white;
+      font-weight: 500;
+      text-shadow: rgba(0,0,0,1) 0 0 40px;
+      h1 {
+        font-weight: 500;
+        font-size: 60px;
+        letter-spacing: 10px;
+      }
+      p {
+        letter-spacing: 3px;
+      }
+    }
+    .feature-row--right {
+      margin-top: 230px;
+    }
+  }
+
+  &__featured-speakers {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    h2 {
+      font-size: 15px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    &__speak-title {
+      font-size: 34px;
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+
+}
+
+@include media-query($on-laptop) {
+  .home {
+    &__header {
+      &__title {
+        h1 {
+          font-size: 50px;
+        }
+        p {
+          letter-spacing: 2px;
+        }
+      }
+      .feature-row--right {
+        margin-top: 130px;
+      }
+    }
+  }
+}
+
+@include media-query($on-tablet) {
+  .home {
+    &__header {
+      &__title {
+        padding-top: 300px;
+      }
+      .feature-row--right {
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+@include media-query($on-palm) {
+  .home {
+    &__header {
+      &__title {
+        h1 {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
+
+@include media-query($on-phone) {
+  .home {
+    &__header {
+      &__title {
+        text-align: center;
+        h1 {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
