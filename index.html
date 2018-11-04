@@ -1,6 +1,105 @@
----
-layout: home
-title: Home
----
+<html>
 
-{% include header.html %}
+<!--Copyright TEDxUTSC All Rights Reserved-->
+<!--Author(s): Jun Zheng (me at jackzh dot com)-->
+
+<head>
+    <meta charset="utf-8">
+    <!--Bootstrap 4-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Montserrat:400,500,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - TEDxUTSC</title>
+</head>
+
+<body class="index">
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">
+        <img src="../assets/logo.png" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Speakers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Schedules</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Past Talks</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn btn-primary" href="#">Buy Tickets</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<header class="home__header row">
+    <img class="home__header__background" src="assets/wave-white.svg"/>
+
+    <div class="col-lg-6 col-md-5"></div>
+    <div class="col-lg-6 col-md-7">
+        <div class="home__header__title">
+            <h1>Resonance</h1>
+            <p>February 2, 2019 | U of T Scarborough</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="feature-row feature-row--right">
+
+            <div class="feature-row__content">
+                <div class="feature-row__content-dec"></div>
+                <div class="feature-row__title">
+                    <label>OUR 2019 THEME</label>
+                    <h2>Energy that moves you</h2>
+                </div>
+                <p>
+                    Words have the ability to emanate and spread
+                    positive energy. They can provide us both the
+                    ideas and tools we can utilize for social change.
+                    We are excited to bring you ideas
+                    that will move you, ideas that resonate with you.
+                </p>
+            </div>
+
+            <img class="feature-row--right__image" src="assets/home-header.jpeg"/>
+        </div>
+    </div>
+</header>
+
+<section class="home__featured-speakers">
+    <h2>Our 10 Speakers</h2>
+    <div class="home__featured-speakers__speak-title">Harnessing the Ultimate Power of Space</div>
+</section>
+
+<section class="home__quote">
+    <div class="feature-row feature-row--left">
+
+        <div class="feature-row__content">
+            <div class="feature-row__content-dec feature-row__content-dec--left"></div>
+                <div class="feature-row__quote">“Today is created here. Today,
+                    TEDxUTSC showed why that’s
+                    our tag line at UTSC. They inspired a better tomorrow!”</div>
+            <label>MALCOM CAMPBELL<br/>FORMER VICE PRESIDENT OF RESEARCH, UTSC</label>
+        </div>
+
+        <img class="feature-row--left__image" src="assets/home-quote.jpeg"/>
+    </div>
+</section>
+
+</body>
+</html>
