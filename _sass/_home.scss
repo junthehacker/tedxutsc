@@ -18,7 +18,7 @@
       letter-spacing: 2px;
       color: white;
       font-weight: 500;
-      text-shadow: rgba(0,0,0,1) 0 0 40px;
+      text-shadow: rgba(0, 0, 0, 1) 0 0 40px;
       h1 {
         font-weight: 500;
         font-size: 60px;
@@ -50,6 +50,15 @@
     }
   }
 
+  &-marketing {
+    background-color: white;
+    padding-top: 1000px;
+    padding-bottom: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url(../../assets/wave-black.svg);
+  }
 }
 
 @include media-query($on-laptop) {
@@ -107,3 +116,5 @@
     }
   }
 }
+
+@import "home_gallery";

@@ -9,13 +9,13 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="feature-row feature-row--right">
+    <div class="feature-row feature-row--right">
 
+        <div class="container">
             <div class="feature-row__content">
                 <div class="feature-row__content-dec"></div>
                 <div class="feature-row__title">
-                    <label>OUR 2019 THEME</label>
+                    <label class="sub-section-label">OUR 2019 THEME</label>
                     <h2>Energy that moves you</h2>
                 </div>
                 <p>
@@ -26,26 +26,28 @@
                     that will move you, ideas that resonate with you.
                 </p>
             </div>
-
-            <img class="feature-row--right__image" src="assets/home-header.jpeg"/>
         </div>
+        <img class="feature-row--right__image" src="assets/home-header.jpeg"/>
     </div>
 </header>
 
 <section class="home__featured-speakers">
     <h2>Our 10 Speakers</h2>
-    <div class="home__featured-speakers__speak-title">Harnessing the Ultimate Power of Space</div>
+    {% include home_gallery.html %}
 </section>
 
 <section class="home__quote">
     <div class="feature-row feature-row--left">
 
+        <div class="container">
         <div class="feature-row__content">
             <div class="feature-row__content-dec feature-row__content-dec--left"></div>
-                <div class="feature-row__quote">“Today is created here. Today,
-                    TEDxUTSC showed why that’s
-                    our tag line at UTSC. They inspired a better tomorrow!”</div>
+            <div class="feature-row__quote">“Today is created here. Today,
+                TEDxUTSC showed why that’s
+                our tag line at UTSC. They inspired a better tomorrow!”
+            </div>
             <label>MALCOM CAMPBELL<br/>FORMER VICE PRESIDENT OF RESEARCH, UTSC</label>
+        </div>
         </div>
 
         <img class="feature-row--left__image" src="assets/home-quote.jpeg"/>

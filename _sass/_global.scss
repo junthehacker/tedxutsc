@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-  max-width: 1950px;
+  max-width: 1300px;
   padding: 0;
 }
 
@@ -35,7 +35,7 @@ body {
   padding: 100px;
   &:hover {
     .feature-row__content-dec {
-      left: -30px;
+      left: -120px;
       transition: left ease 0.3s;
       &--left {
         left: auto;
@@ -64,14 +64,14 @@ body {
     position: absolute;
     z-index: -99;
     transform: rotateZ(-45deg);
-    left: 30px;
-    top: 130px;
+    left: -50px;
+    top: 50px;
     transition: left ease 0.3s;
     &--left {
       transform: rotateZ(45deg);
       left: auto;
       right: 100px;
-      top: 200px;
+      top: 100px;
       transition: right ease 0.3s;
     }
   }
@@ -89,6 +89,7 @@ body {
     display: inline-block;
     color: white;
     max-width: 40%;
+    position: relative;
     text-align: left;
     h2 {
       font-size: 40px;
@@ -100,6 +101,13 @@ body {
   }
 }
 
+
+.sub-section-label {
+  font-family: $primary-font;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
 
 @include media-query($on-palm) {
