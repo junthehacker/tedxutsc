@@ -1,3 +1,5 @@
+@import "variables";
+
 body {
   background-color: black;
   overflow-x: hidden;
@@ -15,9 +17,12 @@ body {
   padding-right: 20px !important;
   display: inline-block;
   &.btn-primary {
-    background-color: #E62B1E;
+    background-color: $primary-color;
     &:active {
-      background-color: #E62B1E;
+      background-color: $primary-color;
+    }
+    &:hover {
+      background-color: darken($primary-color, 10%);
     }
   }
 }
@@ -28,6 +33,17 @@ body {
   position: relative;
   width: 100%;
   padding: 100px;
+  &:hover {
+    .feature-row__content-dec {
+      left: -30px;
+      transition: left ease 0.3s;
+      &--left {
+        left: auto;
+        right: -20px;
+        transition: right ease 0.3s;
+      }
+    }
+  }
   &__quote {
     font-size: 30px;
     padding-bottom: 20px;
@@ -42,7 +58,7 @@ body {
     }
   }
   &__content-dec {
-    background-color: #E62B1E;
+    background-color: $primary-color;
     width: 220px;
     height: 12px;
     position: absolute;
@@ -50,11 +66,13 @@ body {
     transform: rotateZ(-45deg);
     left: 30px;
     top: 130px;
+    transition: left ease 0.3s;
     &--left {
       transform: rotateZ(45deg);
       left: auto;
       right: 100px;
       top: 200px;
+      transition: right ease 0.3s;
     }
   }
   &--left {

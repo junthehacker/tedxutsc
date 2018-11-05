@@ -11,24 +11,29 @@
   padding-bottom: 15px;
   position: fixed;
   width: 100%;
-  .nav-item,
-  .nav-item.active {
+  .nav-item {
     padding-left: 40px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-size: 14px;
+    color: white;
+    border-bottom: rgba(255,255,255,0) 2px solid;
     .nav-link {
-      font-size: 14px;
       color: white;
-      &:hover {
+    }
+    &:hover,
+    &.active {
+      .nav-link {
         color: white;
+        border-bottom: rgba(255,255,255,0.2) 2px solid;
       }
     }
   }
 
   .nav-item.active {
     .nav-link {
-      border-bottom: rgba(255,255,255,0.2) 2px solid;
+
     }
   }
 }
