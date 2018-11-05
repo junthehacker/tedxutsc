@@ -41,7 +41,7 @@
                 <a class="nav-link" href="#">Past Talks</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn btn-primary" href="#">Buy Tickets</a>
+                <a class="btn btn-primary" href="#">Buy Tickets</a>
             </li>
         </ul>
     </div>
@@ -58,13 +58,13 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="feature-row feature-row--right">
+    <div class="feature-row feature-row--right">
 
+        <div class="container">
             <div class="feature-row__content">
                 <div class="feature-row__content-dec"></div>
                 <div class="feature-row__title">
-                    <label>OUR 2019 THEME</label>
+                    <label class="sub-section-label">OUR 2019 THEME</label>
                     <h2>Energy that moves you</h2>
                 </div>
                 <p>
@@ -75,29 +75,75 @@
                     that will move you, ideas that resonate with you.
                 </p>
             </div>
-
-            <img class="feature-row--right__image" src="assets/home-header.jpeg"/>
         </div>
+        <img class="feature-row--right__image" src="assets/home-header.jpeg"/>
     </div>
 </header>
 
 <section class="home__featured-speakers">
     <h2>Our 10 Speakers</h2>
-    <div class="home__featured-speakers__speak-title">Harnessing the Ultimate Power of Space</div>
+    <div class="home-gallery" id="home-gallery">
+    <div class="home-gallery__title">
+        Harnessing the Ultimate Power of Space
+    </div>
+    <ul class="home-gallery__items">
+        <li class="home-gallery__items__item">
+            <img class="home-gallery__items__item__img" src="assets/speakers/01.png" />
+            <div class="home-gallery__items__item__label">
+                John Smith, Astronaut
+            </div>
+        </li>
+        <li class="home-gallery__items__item">
+            <img class="home-gallery__items__item__img" src="assets/speakers/01.png" />
+            <div class="home-gallery__items__item__label">
+                John Smith, Astronaut
+            </div>
+        </li>
+        <li class="home-gallery__items__item home-gallery__items__item--active">
+            <img class="home-gallery__items__item__img" src="assets/speakers/01.png" />
+            <div class="home-gallery__items__item__label">
+                John Smith, Astronaut
+            </div>
+        </li>
+    </ul>
+</div>
+
+<script>
+    const galleryId = "home-gallery";
+</script>
+
+
 </section>
 
 <section class="home__quote">
     <div class="feature-row feature-row--left">
 
+        <div class="container">
         <div class="feature-row__content">
             <div class="feature-row__content-dec feature-row__content-dec--left"></div>
-                <div class="feature-row__quote">“Today is created here. Today,
-                    TEDxUTSC showed why that’s
-                    our tag line at UTSC. They inspired a better tomorrow!”</div>
+            <div class="feature-row__quote">“Today is created here. Today,
+                TEDxUTSC showed why that’s
+                our tag line at UTSC. They inspired a better tomorrow!”
+            </div>
             <label>MALCOM CAMPBELL<br/>FORMER VICE PRESIDENT OF RESEARCH, UTSC</label>
+        </div>
         </div>
 
         <img class="feature-row--left__image" src="assets/home-quote.jpeg"/>
+    </div>
+</section>
+
+<section class="home-marketing">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <label class="sub-section-label">Networking Opportunities</label>
+                <h2>Insert Marketing Title</h2>
+                <p>Words have the ability to emanate and spread
+                    positive energy. They can provide us both the
+                    ideas and tools we can utilize for </p>
+            </div>
+        </div>
     </div>
 </section>
 
