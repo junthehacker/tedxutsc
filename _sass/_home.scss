@@ -52,12 +52,34 @@
 
   &-marketing {
     background-color: white;
-    padding-top: 1000px;
+    padding-top: 100px;
     padding-bottom: 30px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     background-image: url(../../assets/wave-black.svg);
+    h2 {
+      font-family: $primary-font;
+      font-size: 40px;
+      font-weight: bold;
+    }
+    .home-marketing-content {
+      vertical-align: middle;
+      padding-top: 150px;
+      padding-bottom: 200px;
+      padding-right: 50px;
+    }
+    .home-marketing-img-container {
+      .img {
+        width: 400px;
+        height: 300px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          vertical-align: center;
+        }
+      }
+    }
   }
 }
 
