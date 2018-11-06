@@ -39,6 +39,9 @@ body {
   background-color: black;
   overflow-x: hidden; }
 
+h2 {
+  font-family: "Montserrat", sans-serif; }
+
 .container {
   max-width: 1300px;
   padding: 0; }
@@ -50,6 +53,7 @@ body {
   padding-right: 20px !important;
   display: inline-block; }
   .btn.btn-primary {
+    text-transform: uppercase;
     background-color: #E62B1E; }
     .btn.btn-primary:active {
       background-color: #E62B1E; }
@@ -167,12 +171,28 @@ body {
     font-weight: 700; }
 .home-marketing {
   background-color: white;
-  padding-top: 1000px;
+  padding-top: 100px;
   padding-bottom: 30px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   background-image: url(../../assets/wave-black.svg); }
+  .home-marketing h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    font-weight: bold; }
+  .home-marketing .home-marketing-content {
+    vertical-align: middle;
+    padding-top: 150px;
+    padding-bottom: 200px;
+    padding-right: 50px; }
+  .home-marketing .home-marketing-img-container .img {
+    width: 400px;
+    height: 300px;
+    overflow: hidden; }
+    .home-marketing .home-marketing-img-container .img img {
+      width: 100%;
+      vertical-align: center; }
 
 @media screen and (max-width: 1280px) {
   .home__header__title h1 {
@@ -243,3 +263,17 @@ body {
       .home-gallery__items__item--active {
         width: 400px;
         height: 420px; }
+
+.buy-tickets {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  background-image: url(../../assets/footer-background.jpeg);
+  background-size: cover;
+  text-align: center;
+  color: white;
+  background-position: bottom;
+  background-attachment: fixed; }
+  .buy-tickets h2 {
+    font-weight: 700;
+    padding-top: 20px;
+    padding-bottom: 20px; }
