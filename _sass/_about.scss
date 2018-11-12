@@ -72,4 +72,28 @@
     background-image: url(../../assets/wave-black.svg);
     background-size: auto;
   }
+  &__experience{
+    font-family: $libre-font;
+    color: white;
+    font-size: 90px;
+    font-weight: 400;
+    line-height: 109px;
+
+  }
+  &__experience-column{
+    width: 33.33%;
+    text-align: center;
+    vertical-align: middle;
+  }
+  &__explanation{
+    font-family: $fira-font;
+    font-size: 27px;
+    line-height: 29px;
+    color: white;
+
+  }
+  &__experience-box{
+    width: inherit;
+    margin-top: 50px;
+  }
 }
