@@ -95,9 +95,20 @@
   &__experience-box{
     width: inherit;
     margin-top: 100px;
-    margin-bottom: 50px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 11%, black 47%, black 65%, black 92%, black 96%);
   }
+
+}
+.home__header__about .feature-row--right {
+  margin-top: 180px;
+}
+.feature-row {
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  width: 100%;
+  padding: 0px;
+  padding-bottom: 50px;
 }
 .feature-row--right__image__about{
     position: fixed;
@@ -106,12 +117,3 @@
     max-width: 70%;
     z-index: -99;
 }
-.feature-row {
-  font-weight: 500;
-  font-family: 'Montserrat', sans-serif;
-  position: relative;
-  width: 100%;
-  padding: 0px;}
-
-  .home__header .feature-row--right {
-      margin-top: 180px; }
