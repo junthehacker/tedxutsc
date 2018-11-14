@@ -51,7 +51,6 @@ h2 {
   }
   &__quote {
     font-size: 30px;
-    padding-bottom: 20px;
   }
   &--right {
     &__image {
@@ -96,6 +95,7 @@ h2 {
     max-width: 40%;
     position: relative;
     text-align: left;
+    padding: $spacing-unit;
     h2 {
       font-size: 40px;
     }
