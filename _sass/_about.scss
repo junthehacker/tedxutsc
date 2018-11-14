@@ -1,11 +1,10 @@
 .team{
   background-color: white;
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: center;
   background-image: url(../../assets/wave-black.svg);
   background-size: auto;
-  padding-top: 70px;
+  padding-top: 4 * $spacing-unit;
   &__label {
     font-family: $libre-font;
     font-size: 40px;

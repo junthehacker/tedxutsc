@@ -1,6 +1,8 @@
 .home {
   &__header {
     position: relative;
+    width: 100%;
+    margin: 0;
     &__background {
       position: absolute;
       left: 0;
@@ -83,8 +85,7 @@
   }
 
   &__quote {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 5 * $spacing-unit 0 5 * $spacing-unit 0;
   }
 }
 
