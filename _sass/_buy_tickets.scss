@@ -1,6 +1,5 @@
 .buy-tickets {
-  padding-top: 140px;
-  padding-bottom: 140px;
+  padding: 7 * $spacing-unit 0 7 * $spacing-unit 0;
   background-image: url(../../assets/footer-background.jpeg);
   background-size: cover;
   text-align: center;
@@ -9,7 +8,6 @@
   background-attachment: fixed;
   h2 {
     font-weight: 700;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: $spacing-unit 0 $spacing-unit 0;
   }
 }
