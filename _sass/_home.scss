@@ -81,6 +81,11 @@
       }
     }
   }
+
+  &__quote {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
 @include media-query($on-laptop) {
