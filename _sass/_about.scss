@@ -95,12 +95,13 @@
   &__experience-box{
     width: inherit;
     margin-top: 100px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 11%, black 47%, black 65%, black 92%, black 96%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 11%, black 47%, black 65%, black 72%, black 96%);
   }
 
 }
 .home__header__about .feature-row--right {
   margin-top: 180px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 90%, black 47%, black 65%, black 72%, black 96%);
 }
 .feature-row {
   font-weight: 500;
