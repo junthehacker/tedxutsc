@@ -1,14 +1,40 @@
 @import "variables";
 
 .home-gallery {
+  opacity: 0;
   font-family: $primary-font;
   &__title {
     text-align: center;
     font-size: 30px;
     font-weight: 500;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    &__content {
+      flex:1 1 auto;
+    }
+    &__left-btn,
+    &__right-btn {
+      flex:0 0 auto;
+      width: 100px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      border: none;
+      cursor: pointer;
+      outline: 0 !important;
+    }
+    &__left-btn {
+      background-image: url(../arrow-left.svg);
+    }
+    &__right-btn {
+      background-image: url(../arrow-right.svg);
+    }
   }
   &__items {
     list-style: none;
+    padding: 0;
+    left: 0;
+    position: relative;
     &__item {
       vertical-align: middle;
       display: inline-block;
@@ -18,13 +44,15 @@
       cursor: pointer;
       overflow: hidden;
       margin: 20px;
+      transition: all ease 0.3s;
       &__img {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
       }
-      &:hover {
+      &:hover,
+      &--active {
         .home-gallery__items__item__label {
           opacity: 1;
           transition: opacity ease 0.5s;
@@ -49,8 +77,8 @@
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
       }
       &--active {
-        width: 400px;
-        height: 420px;
+        transform: scale(1.1);
+        transition: all ease 0.3s;
       }
     }
   }
