@@ -1,20 +1,19 @@
 <div class="home-gallery" id="home-gallery">
-    <div class="home-gallery__title">
-        Harnessing the Ultimate Power of Space
-    </div>
-    <ul class="home-gallery__items">
-        {% for item in page.gallery %}
+    <div class="container">
+        <div class="home-gallery__title">
+            <button onClick="previousGalleryItem()" class="home-gallery__title__left-btn"></button>
+            <div class="home-gallery__title__content">Harnessing the Ultimate Power of Space</div>
+            <button onClick="nextGalleryItem()" class="home-gallery__title__right-btn"></button>
+        </div>
+        <ul class="home-gallery__items">
+            {% for item in page.gallery %}
             <li class="home-gallery__items__item">
-                <img class="home-gallery__items__item__img" src="{{ item.img }}" alt="{{ item.speaker }}" />
+                <img class="home-gallery__items__item__img" src="{{ item.img }}" alt="{{ item.speaker }}"/>
                 <div class="home-gallery__items__item__label">
                     {{ item.speaker }}
                 </div>
             </li>
-        {% endfor %}
-    </ul>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
-
-<script>
-    const galleryId = "home-gallery";
-</script>
-
