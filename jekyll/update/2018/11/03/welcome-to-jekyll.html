@@ -10,12 +10,13 @@
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Montserrat:400,500,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="/tedxutsc/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Jekyll! - TEDxUTSC</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.png">
 </head><body><header class="site-header" role="banner">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/tedxutsc/">TEDxUTSC</a><nav class="site-nav">
+  <div class="wrapper"><a class="site-title" rel="author" href="/">TEDxUTSC</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -25,7 +26,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/tedxutsc/about/">About</a><a class="page-link" href="/tedxutsc/">Home</a></div>
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/">Home</a><a class="page-link" href="/team.html">Team</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -55,7 +56,7 @@
 <p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
 
 
-  </div><a class="u-url" href="/tedxutsc/jekyll/update/2018/11/03/welcome-to-jekyll.html" hidden></a>
+  </div><a class="u-url" href="/jekyll/update/2018/11/03/welcome-to-jekyll.html" hidden></a>
 </article>
 
       </div>
@@ -63,12 +64,34 @@
     <div class="container">
         <label class="sub-section-label">JOIN THE MOVEMENT</label>
         <h2>Ready to be inspired?</h2>
-        <button class="btn btn-primary">Buy Tickets</button>
+        <button disabled class="btn btn-primary">TICKET SALE WILL OPEN SOON</button>
     </div>
 </section>
 
+<div id="loading-page">
+<div class="lds-ripple"><div></div><div></div></div>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+    // Animation scripts
+    (function() {
+        setTimeout(function() {
+            $("#loading-page").fadeOut();
+        }, 2000);
+
+
+        $(window).scroll(function (e) {
+            if($(window).scrollTop() > 200) {
+                $(".navbar").addClass("darken");
+            } else {
+                $(".navbar").removeClass("darken");
+            }
+        });
+    })();
+</script></body>
 
 </html>
