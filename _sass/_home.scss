@@ -60,6 +60,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    width: 100%;
+    overflow: hidden;
     background-image: url(../../assets/wave-black.svg);
     h2 {
       font-family: $primary-font;
@@ -87,6 +89,7 @@
   }
 
   &__quote {
+    overflow: hidden;
     padding: 5 * $spacing-unit 0 5 * $spacing-unit 0;
   }
 }
@@ -128,7 +131,20 @@
       &__title {
         h1 {
           font-size: 40px;
+          letter-spacing: 2px;
         }
+        p {
+          letter-spacing: 1px;
+        }
+      }
+    }
+    &-marketing {
+      .home-marketing-content {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+      .home-marketing-img-container {
+        display: none;
       }
     }
   }

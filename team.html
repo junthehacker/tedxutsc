@@ -1,0 +1,124 @@
+---
+layout: home
+title: Team
+team:
+  - title: Leads
+    members:
+      - name: SAKINA GADRIWALA
+        position: Chair
+        image: assets/team/sakina.png
+      - name: FEDRIZ CANTILADO
+        position: Conference Development
+        image: assets/team/fedriz.png
+      - name: SHAGNY SHANMUGAN
+        position: Marketing & Communications
+        image: assets/team/shagny.png
+      - name: PIYAL SARKER
+        position: Program Development
+        image: assets/team/piyal.png
+  - title: Directors
+    members:
+      - name: RIMSHAH RAHMAN
+        position: Events
+        image: assets/team/rimshah.png
+      - name: JUN ZHENG
+        position: Information Technology
+        image: assets/team/jun.png
+      - name: MAISHA MUSTANZIR
+        position: Speaker Relations - Internal
+        image: assets/team/maisha.png
+      - name: AAHELI MUKHERJEE
+        position: Productions - Technical
+        image: assets/team/aaheli.png
+      - name: WINKY CAI
+        position: Productions - Talents
+        image: assets/team/winky.png
+      - name: VANSHIKA AGARWAL
+        position: Speaker Relations - Internal
+        image: assets/team/vanshika.png
+      - name: JOY PANJAITAN
+        position: Design
+        image: assets/team/joy.png
+      - name: TARIQ AL HASHIM
+        position: Partnerships
+        image: assets/team/tariq.png
+      - name: NAZRIN ALIYEVA
+        position: Director of Finance
+        image: assets/team/nazrin.jpeg
+      - name: KARTAVI PATEL
+        position: Speaker Relations  - Alumni & Students
+        image: assets/team/kartavi.png
+      - name: WILLIAM SONG
+        position: Communications
+        image: assets/team/william.jpeg
+      - name: RHYTHM SACHDEVA
+        position: Speaker Relations - External
+        image: assets/team/rhythm.png
+  - title: Associates
+    members:
+
+---
+
+
+<header class="home__header__about">
+    <div class="feature-row feature-row--right">
+        <div class="container">
+            <div class="feature-row__content">
+                <div class="feature-row__content-dec"></div>
+                <div class="feature-row__title">
+                    <label class="sub-section-label">OUR TEAM</label>
+                    <h2>We aspire to start a movement</h2>
+                </div>
+                <p>
+                    Since 2012,TEDxUTSC has independently organized a
+                    platform for our community's sharpest visionaries to
+                    inspire and captivate Toronto, GTA, and the global audience.
+                </p>
+            </div>
+        </div>
+        <div class="team__experience-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <label class="team__experience">1</label>
+                        <h2 class="team__explanation">Stage</h2>
+                    </div>
+                    <div class="col-4">
+                        <label class="team__experience">7</label>
+                        <h2 class="team__explanation">Years of <br/>Storytelling</h2>
+                    </div>
+                    <div class="col-4">
+                        <label class="team__experience">27</label>
+                        <h2 class="team__explanation">Countries that live<br/>streamed our event</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="feature-row--right__image" src="assets/team-header.jpeg"/>
+    </div>
+</header>
+
+<section class="team">
+    <div class="container">
+        <label class="team__sub-section">MEET OUR 2019 TEAM</label>
+        {% for section in page.team %}
+        <h2 class="team__label">{{ section.title }}</h2>
+        <div class="row">
+            {% for member in section.members %}
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="team__member-item">
+                    <img src="{{ member.image }}" class="team__picture"/>
+                    <div class="team__name-gradient">
+                        <label class="team__member-name">{{ member.name }}</label>
+                        <label class="team__member-position">{{ member.position }}</label>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <br/><br/>
+        {% endfor %}
+    </div>
+</section>
+
+{% include footer.html %}
