@@ -22,8 +22,9 @@
             $.each(items, function (_, item) {
                 totalWidth += $(item).outerWidth()
             });
-            $(itemsContainer).css({width: totalWidth + 400 + 'px'});
-
+            if ($(window).width() > 600){
+              $(itemsContainer).css({width: totalWidth + 400 + 'px'});
+            }
             // Move gallery to middle
             __switchGalleryActiveItem(Math.floor(items.length / 2));
 
@@ -76,7 +77,7 @@
             if (currentItem < 0) currentItem = getGalleryItemCount() - 1;
             __switchGalleryActiveItem(currentItem);
         }
-
+        
         // Expose functions to global context
         window.nextGalleryItem = nextGalleryItem;
         window.previousGalleryItem = previousGalleryItem;
@@ -85,4 +86,3 @@
     })();
 
 </script>
-
