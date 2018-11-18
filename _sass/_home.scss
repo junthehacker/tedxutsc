@@ -1,3 +1,14 @@
+@keyframes fade-from-top {
+  from {
+    margin-top: -200px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 0.5;
+  }
+}
+
 .home {
   &__header {
     position: relative;
@@ -5,11 +16,14 @@
     margin: 0;
     overflow: hidden;
     &__background {
+      margin-top: -300px;
+      opacity: 0;
+      animation: fade-from-top 2s ease 2.5s 1 normal forwards;
       position: absolute;
       left: 0;
       top: 30px;
       width: 100%;
-      opacity: 0.7;
+      z-index: -1;
     }
     &__title {
       padding: 40px;
