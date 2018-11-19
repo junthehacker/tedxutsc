@@ -39,7 +39,7 @@
                 <a class="nav-link" href="https://www.youtube.com/user/TEDxUTSC">Past Talks</a>
             </li>
             <li class="nav-item">
-                <button disabled class="btn btn-primary">TICKET SALE WILL OPEN SOON</button>
+                <button disabled class="btn btn-primary">Ticket Sales Opening Soon</button>
             </li>
         </ul>
     </div>
@@ -150,7 +150,7 @@
     <div class="container">
         <label class="sub-section-label">JOIN THE MOVEMENT</label>
         <h2>Ready to be inspired?</h2>
-        <button disabled class="btn btn-primary">TICKET SALE WILL OPEN SOON</button>
+        <button disabled class="btn btn-primary">Ticket Sales Opening Soon</button>
     </div>
 </section>
 
@@ -198,13 +198,17 @@
             let items = $(`#${galleryId} .home-gallery__items__item`);
             let itemsContainer = $(`#${galleryId} .home-gallery__items`);
 
+
             // Get total with of all items, and set width to contain all of them
             let totalWidth = 0;
             $.each(items, function (_, item) {
                 totalWidth += $(item).outerWidth()
             });
-            $(itemsContainer).css({width: totalWidth + 400 + 'px'});
-
+            if ($(window).width() > 600){
+              $(itemsContainer).css({width: totalWidth + 400 + 'px'});
+            }else{
+              $("button").css({width: '50px', 'margin-top': '60px'});
+            }
             // Move gallery to middle
             __switchGalleryActiveItem(Math.floor(items.length / 2));
 
@@ -266,7 +270,6 @@
     })();
 
 </script>
-
 
 
 </body>

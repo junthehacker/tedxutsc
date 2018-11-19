@@ -276,13 +276,13 @@ h2 {
       font-size: 30px; } }
 .home-gallery {
   opacity: 0;
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden; }
   .home-gallery__title {
     text-align: center;
     font-size: 30px;
     font-weight: 500;
     display: flex;
-    width: 100%;
     justify-content: space-between; }
     .home-gallery__title__content {
       flex: 1 1 auto; }
@@ -302,7 +302,10 @@ h2 {
     list-style: none;
     padding: 0;
     left: 0;
-    position: relative; }
+    position: relative;
+    white-space: nowrap;
+    overflow-y: hidden;
+    display: inline-block; }
     .home-gallery__items__item {
       vertical-align: middle;
       display: inline-block;
@@ -391,6 +394,10 @@ h2 {
     padding-right: 20px; }
   .team__picture {
     width: 100%; }
+  .team__border {
+    padding-left: 165px;
+    padding-right: 165px;
+    padding-bottom: 50px; }
   .team__member-item {
     position: relative;
     margin: 10px;
@@ -452,7 +459,7 @@ h2 {
     text-align: center;
     width: inherit;
     margin-top: 100px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 11%, black 47%, black 65%, black 72%, black 96%); }
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 47%, black 65%, black 72%, black 96%); }
 
 .home__header__about {
   width: 100%;
@@ -461,14 +468,14 @@ h2 {
 
 .home__header__about .feature-row--right {
   margin-top: 180px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 90%, black 47%, black 65%, black 72%, black 96%); }
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 90%, black 47%, black 65%, black 73%, black 80%); }
 
 .feature-row {
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
   position: relative;
   width: 100%;
-  padding: 0px; }
+  padding: 0; }
 
 .feature-row--right__image__about {
   position: fixed;
