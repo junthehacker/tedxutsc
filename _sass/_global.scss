@@ -115,13 +115,32 @@ h2 {
 }
 
 
-@include media-query($on-palm) {
+@include media-query($on-laptop) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+@include media-query($on-tablet) {
+  .container {
+    max-width: 900px;
+  }
   .feature-row {
     padding: 50px;
     &--right {
     }
     &__content {
       max-width: 100%;
+    }
+  }
+}
+
+@include media-query($on-palm) {
+  .feature-row {
+    &__content {
+      h2 {
+        font-size: 24px;
+      }
     }
   }
 }
