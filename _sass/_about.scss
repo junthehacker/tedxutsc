@@ -33,6 +33,12 @@
   &__picture{
     width: 100%;
   }
+
+  &__border {
+    padding-left: 165px;
+    padding-right: 165px;
+    padding-bottom: 50px;
+  }
   &__member-item {
     position: relative;
     margin: 10px;
@@ -104,9 +110,8 @@
     text-align: center;
     width: inherit;
     margin-top: 100px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 11%, black 47%, black 65%, black 72%, black 96%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 47%, black 65%, black 72%, black 96%);
   }
-
 }
 
 .home__header__about {
@@ -117,14 +122,15 @@
 
 .home__header__about .feature-row--right {
   margin-top: 180px;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 90%, black 47%, black 65%, black 72%, black 96%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 90%, black 47%, black 65%, black 73%, black 80%);
+
 }
 .feature-row {
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
   position: relative;
   width: 100%;
-  padding: 0px;
+  padding: 0;
 }
 .feature-row--right__image__about{
     position: fixed;

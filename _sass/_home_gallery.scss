@@ -3,12 +3,12 @@
 .home-gallery {
   opacity: 0;
   font-family: $primary-font;
+  overflow-x: hidden;
   &__title {
     text-align: center;
     font-size: 30px;
     font-weight: 500;
     display: flex;
-    width: 100%;
     justify-content: space-between;
     &__content {
       flex:1 1 auto;
@@ -35,6 +35,9 @@
     padding: 0;
     left: 0;
     position: relative;
+    white-space: nowrap;
+    overflow-y: hidden;
+    display: inline-block;
     &__item {
       vertical-align: middle;
       display: inline-block;

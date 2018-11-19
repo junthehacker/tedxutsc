@@ -17,13 +17,17 @@
             let items = $(`#${galleryId} .home-gallery__items__item`);
             let itemsContainer = $(`#${galleryId} .home-gallery__items`);
 
+
             // Get total with of all items, and set width to contain all of them
             let totalWidth = 0;
             $.each(items, function (_, item) {
                 totalWidth += $(item).outerWidth()
             });
-            $(itemsContainer).css({width: totalWidth + 400 + 'px'});
-
+            if ($(window).width() > 600){
+              $(itemsContainer).css({width: totalWidth + 400 + 'px'});
+            }else{
+              $("button").css({width: '50px', 'margin-top': '60px'});
+            }
             // Move gallery to middle
             __switchGalleryActiveItem(Math.floor(items.length / 2));
 
@@ -85,4 +89,3 @@
     })();
 
 </script>
-
