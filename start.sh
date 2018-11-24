@@ -1,2 +1,4 @@
 #!/bin/bash
-JEKYLL_ENV=$1 BUILD=`git rev-parse --short HEAD` bundle exec jekyll serve
+BUILD_HASH=`git rev-parse --short HEAD`
+BUILD_TIME=`date +_%Y%m%d_%H%M%S`
+JEKYLL_ENV=$1 BUILD="$BUILD_HASH$BUILD_TIME" bundle exec jekyll serve

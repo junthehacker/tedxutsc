@@ -1,0 +1,80 @@
+.footer {
+    background-color: black;
+    padding-top: 4 * $spacing-unit;
+    padding-bottom: 4 * $spacing-unit;
+    color: white;
+    font-family: $primary-font;
+    .container {
+        padding: 40px;
+    }
+    &__newsletter {
+        text-align: right;
+        &__title {
+            font-family: $libre-font;
+            font-size: 28px;
+            font-weight: bold;
+        }
+    }
+    &__contact {
+        display: flex;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        ul {
+            flex: 0.5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            li {
+                list-style: none;
+            }
+        }
+    }
+    &__copyright {
+        flex: 0.5;
+        font-size: 13px;
+        text-align: right;
+        opacity: 0.5;
+        // Invisible env and build number label
+        small {
+            color: black;
+            font-size: 1px;
+        }
+    }
+    &__nav {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            li {
+                font-size: 16px;
+                text-transform: uppercase;
+                font-weight: 500;
+                list-style: none;
+                display: inline-block;
+                a:link,
+                a:visited,
+                a:active {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@include media-query($on-palm) {
+    .footer {
+        &__nav {
+            // Make navigation vertical
+            ul {
+                display: block;
+                li {
+                    display: block;
+                }
+            }
+        }
+    }
+}
