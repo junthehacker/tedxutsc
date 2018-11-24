@@ -287,9 +287,12 @@ h2 {
     .home-gallery__title__content {
       flex: 1 1 auto; }
     .home-gallery__title__left-btn, .home-gallery__title__right-btn {
+      background-color: white;
+      height: 50px;
       flex: 0 0 auto;
       width: 100px;
-      background-size: contain;
+      background-size: 80%;
+      background-position: center;
       background-repeat: no-repeat;
       border: none;
       cursor: pointer;
@@ -311,7 +314,7 @@ h2 {
       display: inline-block;
       position: relative;
       width: 300px;
-      height: 300px;
+      height: 390px;
       cursor: pointer;
       overflow: hidden;
       margin: 20px;
@@ -345,6 +348,10 @@ h2 {
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 );
         /* IE6-9 */ }
+        .home-gallery__items__item__label small {
+          display: block;
+          font-size: 13px;
+          text-transform: uppercase; }
       .home-gallery__items__item--active {
         transform: scale(1.1);
         transition: all ease 0.3s; }

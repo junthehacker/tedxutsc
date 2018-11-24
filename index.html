@@ -79,12 +79,113 @@
 </header>
 
 <section class="home__featured-speakers">
-    <h2>Our Speakers</h2>
     <div class="home-gallery" id="home-gallery">
     <div class="container">
         <div class="home-gallery__title">
-            <div class="home-gallery__title__content" style="font-size: 40px; padding: 30px;">Coming soon...</div>
+            <button onClick="previousGalleryItem()" class="home-gallery__title__left-btn"></button>
+            <div class="home-gallery__title__content">Our 12 Speakers</div>
+            <button onClick="nextGalleryItem()" class="home-gallery__title__right-btn"></button>
         </div>
+        <br/>
+        <ul class="home-gallery__items">
+            
+            <li class="home-gallery__items__item">
+                <img class="home-gallery__items__item__img" src="assets/speakers/axel.jpeg" alt="Axel Villamil"/>
+                <div class="home-gallery__items__item__label">
+                    <small>CEO, Designer</small>
+                    Axel Villamil
+                </div>
+            </li>
+            
+            <li class="home-gallery__items__item">
+                <img class="home-gallery__items__item__img" src="assets/speakers/shehna.jpeg" alt="Shehna Javeed"/>
+                <div class="home-gallery__items__item__label">
+                    <small>ACADEMIC & LEARNING STRATEGIST</small>
+                    Shehna Javeed
+                </div>
+            </li>
+            
+            <li class="home-gallery__items__item">
+                <img class="home-gallery__items__item__img" src="assets/speakers/marlene.jpeg" alt="Marlene Goldman"/>
+                <div class="home-gallery__items__item__label">
+                    <small>English Professor</small>
+                    Marlene Goldman
+                </div>
+            </li>
+            
+            <li class="home-gallery__items__item">
+                <img class="home-gallery__items__item__img" src="assets/speakers/zayn.jpeg" alt="Zayn Khamis"/>
+                <div class="home-gallery__items__item__label">
+                    <small>MOLECULAR BIOLOGIST</small>
+                    Zayn Khamis
+                </div>
+            </li>
+            
+            <li class="home-gallery__items__item">
+                <img class="home-gallery__items__item__img" src="assets/speakers/jonathan.jpeg" alt="Jonathan Kay"/>
+                <div class="home-gallery__items__item__label">
+                    <small>JOURNALIST & AUTHOR</small>
+                    Jonathan Kay
+                </div>
+            </li>
+            
+            <li class="home-gallery__items__item">
+                <img class="home-gallery__items__item__img" src="assets/speakers/tahmid.jpeg" alt="Tahmid Hasib Khan"/>
+                <div class="home-gallery__items__item__label">
+                    <small>Global Health Student</small>
+                    Tahmid Hasib Khan
+                </div>
+            </li>
+            
+            <li class="home-gallery__items__item">
+                <img class="home-gallery__items__item__img" src="assets/speakers/sohaib.jpeg" alt="Sohaib Ahmed"/>
+                <div class="home-gallery__items__item__label">
+                    <small>COO & RESEARCHER</small>
+                    Sohaib Ahmed
+                </div>
+            </li>
+            
+            <li class="home-gallery__items__item">
+                <img class="home-gallery__items__item__img" src="assets/speakers/kathleen.jpeg" alt="Kathleen Smith"/>
+                <div class="home-gallery__items__item__label">
+                    <small>COMPUTER & MATH PROFESSOR</small>
+                    Kathleen Smith
+                </div>
+            </li>
+            
+            <li class="home-gallery__items__item">
+                <img class="home-gallery__items__item__img" src="assets/speakers/maya.jpeg" alt="Maya Cheaib"/>
+                <div class="home-gallery__items__item__label">
+                    <small>CRIMINOLOGY & SOCIO-LEGAL<br/>STUDIES MASTERS STUDENT</small>
+                    Maya Cheaib
+                </div>
+            </li>
+            
+            <li class="home-gallery__items__item">
+                <img class="home-gallery__items__item__img" src="assets/speakers/hartley.jpeg" alt="Hartley Jafine"/>
+                <div class="home-gallery__items__item__label">
+                    <small>ARTS & SCIENCES PROFFESOR</small>
+                    Hartley Jafine
+                </div>
+            </li>
+            
+            <li class="home-gallery__items__item">
+                <img class="home-gallery__items__item__img" src="assets/speakers/steve.jpeg" alt="Steve Russell"/>
+                <div class="home-gallery__items__item__label">
+                    <small>PHOTOJOURNALIST</small>
+                    Steve Russell
+                </div>
+            </li>
+            
+            <li class="home-gallery__items__item">
+                <img class="home-gallery__items__item__img" src="assets/speakers/arshiya.jpeg" alt="Arshiya Bhan"/>
+                <div class="home-gallery__items__item__label">
+                    <small>DANCER & FOUNDER<br/>OF FITNESS BRAND</small>
+                    Arshiya Bhan
+                </div>
+            </li>
+            
+        </ul>
     </div>
 </div>
 
@@ -168,7 +269,7 @@
                         <li><a href="mailto:info@tedxutsc.com"><img src="assets/icons/email.png" alt="Email" /></a></li>
                     </ul>
                     <div class="footer__copyright">
-                        <small>production 9e21442_20181124_114933</small>
+                        <small>production 03fc881_20181124_124635</small>
                         &copy; TEDXUTSC 2018
                     </div>
                 </div>
@@ -216,7 +317,7 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
 
 `, 'color: red; font-weight: bold;');
 
-console.log("You are running in production, build 9e21442_20181124_114933");
+console.log("You are running in production, build 03fc881_20181124_124635");
 console.log("Want to help us out? https://github.com/junthehacker/tedxutsc");
     // Hide the loading screen after 2 seconds
 (function() {
@@ -242,7 +343,7 @@ console.log("Want to help us out? https://github.com/junthehacker/tedxutsc");
  */
 (function () {
     const galleryId = "home-gallery";
-    const itemWidth = 340;
+    const itemWidth = 344;
     let currentItem = 0;
 
     /**
@@ -260,9 +361,7 @@ console.log("Want to help us out? https://github.com/junthehacker/tedxutsc");
             totalWidth += $(item).outerWidth()
         });
         if ($(window).width() > 600){
-            $(itemsContainer).css({width: totalWidth + 400 + 'px'});
-        }else{
-            $("button").css({width: '50px', 'margin-top': '60px'});
+            $(itemsContainer).css({width: totalWidth + 800 + 'px'});
         }
         // Move gallery to middle
         __switchGalleryActiveItem(Math.floor(items.length / 2));
