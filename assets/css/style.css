@@ -564,3 +564,61 @@ h2 {
     width: 58px;
     height: 58px;
     opacity: 0; } }
+.footer {
+  background-color: black;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  color: white;
+  font-family: "Montserrat", sans-serif; }
+  .footer .container {
+    padding: 40px; }
+  .footer__newsletter {
+    text-align: right; }
+    .footer__newsletter__title {
+      font-family: "Libre Franklin", sans-serif;
+      font-size: 28px;
+      font-weight: bold; }
+  .footer__contact {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 10px; }
+    .footer__contact ul {
+      flex: 0.5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between; }
+      .footer__contact ul li {
+        list-style: none; }
+  .footer__copyright {
+    flex: 0.5;
+    font-size: 13px;
+    text-align: right;
+    opacity: 0.5; }
+    .footer__copyright small {
+      color: black;
+      font-size: 1px; }
+  .footer__nav {
+    padding-top: 20px;
+    padding-bottom: 10px; }
+    .footer__nav ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between; }
+      .footer__nav ul li {
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 500;
+        list-style: none;
+        display: inline-block; }
+        .footer__nav ul li a:link,
+        .footer__nav ul li a:visited,
+        .footer__nav ul li a:active {
+          color: white; }
+
+@media screen and (max-width: 769px) {
+  .footer__nav ul {
+    display: block; }
+    .footer__nav ul li {
+      display: block; } }
