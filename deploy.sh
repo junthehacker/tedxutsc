@@ -23,7 +23,7 @@ BUILD_HASH=`git rev-parse --short HEAD`
 BUILD_TIME=`date +_%Y%m%d_%H%M%S`
 
 run_build() {
-  JEKYLL_ENV=$1 BUILD="$BUILD_HASH$BUILD_TIME" bundle exec jekyll build
+  JEKYLL_ENV=production BUILD="$BUILD_HASH$BUILD_TIME" bundle exec jekyll build
 }
 
 parse_args() {
