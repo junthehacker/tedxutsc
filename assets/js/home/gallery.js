@@ -3,7 +3,7 @@
  */
 (function () {
     const galleryId = "home-gallery";
-    const itemWidth = 340;
+    const itemWidth = 344;
     let currentItem = 0;
 
     /**
@@ -21,9 +21,7 @@
             totalWidth += $(item).outerWidth()
         });
         if ($(window).width() > 600){
-            $(itemsContainer).css({width: totalWidth + 400 + 'px'});
-        }else{
-            $("button").css({width: '50px', 'margin-top': '60px'});
+            $(itemsContainer).css({width: totalWidth + 800 + 'px'});
         }
         // Move gallery to middle
         __switchGalleryActiveItem(Math.floor(items.length / 2));
