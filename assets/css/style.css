@@ -104,7 +104,7 @@ h2 {
     right: 0;
     bottom: 0;
     max-width: 70%;
-    z-index: -99; }
+    max-height: 120%; }
   .feature-row__content-dec {
     background-color: #E62B1E;
     width: 220px;
@@ -130,6 +130,7 @@ h2 {
       max-width: 70%;
       z-index: -99; }
   .feature-row__content {
+    z-index: 2;
     display: inline-block;
     color: white;
     max-width: 40%;
@@ -182,7 +183,7 @@ h2 {
     left: 0;
     top: 30px;
     width: 100%;
-    z-index: -1; }
+    z-index: 2; }
   .home__header__title {
     padding: 40px;
     font-family: 'Montserrat', sans-serif;
@@ -193,7 +194,9 @@ h2 {
     letter-spacing: 2px;
     color: white;
     font-weight: 500;
-    text-shadow: black 0 0 40px; }
+    text-shadow: black 0 0 40px;
+    z-index: 3;
+    position: relative; }
     .home__header__title h1 {
       font-weight: 500;
       font-size: 60px;
@@ -201,7 +204,7 @@ h2 {
     .home__header__title p {
       letter-spacing: 3px; }
   .home__header .feature-row--right {
-    margin-top: 230px; }
+    padding-top: 230px; }
 .home__featured-speakers {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -252,12 +255,12 @@ h2 {
   .home__header__title p {
     letter-spacing: 2px; }
   .home__header .feature-row--right {
-    margin-top: 130px; } }
+    padding-top: 130px; } }
 @media screen and (max-width: 992px) {
   .home__header__title {
     padding-top: 300px; }
   .home__header .feature-row--right {
-    margin-top: 50px; } }
+    padding-top: 50px; } }
 @media screen and (max-width: 769px) {
   .home__header__title h1 {
     font-size: 40px;
@@ -463,6 +466,9 @@ h2 {
     font-weight: 100;
     color: white; }
   .team__experience-box {
+    z-index: 2;
+    position: relative;
+    padding-bottom: 50px;
     text-align: center;
     width: inherit;
     margin-top: 100px;
@@ -470,8 +476,9 @@ h2 {
 
 .home__header__about {
   width: 100%;
-  overflow: hidden;
-  padding-bottom: 50px; }
+  overflow: hidden; }
+  .home__header__about--large-pb {
+    padding-bottom: 200px; }
 
 .home__header__about .feature-row--right {
   margin-top: 180px;
@@ -629,3 +636,27 @@ h2 {
     display: block; }
     .footer__nav ul li {
       display: block; } }
+.speaker-modal .modal-dialog .modal-content {
+  background-image: url(../wave-black.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  border-radius: 0; }
+  .speaker-modal .modal-dialog .modal-content .speaker-image {
+    width: 100%; }
+  .speaker-modal .modal-dialog .modal-content .speaker-content {
+    padding: 20px;
+    padding-right: 40px;
+    padding-top: 40px; }
+    .speaker-modal .modal-dialog .modal-content .speaker-content .speaker-title {
+      font-size: 30px;
+      font-family: "Libre Franklin", sans-serif;
+      font-weight: bold;
+      line-height: 30px; }
+    .speaker-modal .modal-dialog .modal-content .speaker-content p {
+      padding-top: 15px; }
+
+@media (min-width: 768px) {
+  .modal-xl {
+    width: 90%;
+    max-width: 1000px; } }
