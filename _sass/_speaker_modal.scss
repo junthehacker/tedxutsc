@@ -1,0 +1,35 @@
+.speaker-modal {
+    .modal-dialog {
+        .modal-content {
+            background-image: url(../wave-black.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            border-radius: 0;
+            .speaker-image {
+                width: 100%;
+            }
+            .speaker-content {
+                .speaker-title {
+                    font-size: 30px;
+                    font-family: $libre-font;
+                    font-weight: bold;
+                    line-height: 30px;
+                }
+                p {
+                    padding-top: 15px;
+                }
+                padding: 20px;
+                padding-right: 40px;
+                padding-top: 40px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .modal-xl {
+        width: 90%;
+        max-width:1000px;
+    }
+}

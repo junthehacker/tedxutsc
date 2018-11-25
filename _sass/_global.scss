@@ -58,7 +58,7 @@ h2 {
       right: 0;
       bottom: 0;
       max-width: 70%;
-      z-index: -99;
+      max-height: 120%;
     }
   }
   &__content-dec {
@@ -90,6 +90,7 @@ h2 {
     }
   }
   &__content {
+    z-index: 2;
     display: inline-block;
     color: white;
     max-width: 40%;

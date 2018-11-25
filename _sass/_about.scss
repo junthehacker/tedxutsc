@@ -107,6 +107,9 @@
 
   }
   &__experience-box{
+    z-index: 2;
+    position: relative;
+    padding-bottom: 50px;
     text-align: center;
     width: inherit;
     margin-top: 100px;
@@ -117,7 +120,9 @@
 .home__header__about {
   width: 100%;
   overflow: hidden;
-  padding-bottom: 50px;
+  &--large-pb {
+    padding-bottom: 200px;
+  }
 }
 
 .home__header__about .feature-row--right {

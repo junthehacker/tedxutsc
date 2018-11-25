@@ -15,9 +15,12 @@
     }
     &__left-btn,
     &__right-btn {
+      background-color: white;
+      height: 50px;
       flex:0 0 auto;
       width: 100px;
-      background-size: contain;
+      background-size: 80%;
+      background-position: center;
       background-repeat: no-repeat;
       border: none;
       cursor: pointer;
@@ -43,7 +46,7 @@
       display: inline-block;
       position: relative;
       width: 300px;
-      height: 300px;
+      height: 390px;
       cursor: pointer;
       overflow: hidden;
       margin: 20px;
@@ -62,6 +65,11 @@
         }
       }
       &__label {
+        small {
+          display: block;
+          font-size: 13px;
+          text-transform: uppercase;
+        }
         transition: opacity ease 0.5s;
         position: absolute;
         left: 0;
