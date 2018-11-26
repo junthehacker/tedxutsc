@@ -8,11 +8,24 @@
         padding: 40px;
     }
     &__newsletter {
-        text-align: right;
+        text-align: center;
+        padding-top: 20px;
         &__title {
             font-family: $libre-font;
             font-size: 28px;
             font-weight: bold;
+        }
+        &__textbox{
+          background: black;
+          width: 255px;
+          height: 40px;
+          color: white;
+          border: 0;
+          outline: 0;
+          border-bottom: 1px solid white;
+          font-family: $primary-font;
+          line-height: 20px;
+          font-size: 16px;
         }
     }
     &__contact {
