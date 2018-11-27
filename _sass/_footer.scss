@@ -10,6 +10,7 @@
     &__newsletter {
         text-align: center;
         padding-top: 20px;
+
         &__title {
             font-family: $libre-font;
             font-size: 28px;
@@ -17,7 +18,7 @@
         }
         &__textbox{
           background: black;
-          width: 255px;
+          width: 205px;
           height: 40px;
           color: white;
           border: 0;
@@ -26,6 +27,27 @@
           font-family: $primary-font;
           line-height: 20px;
           font-size: 16px;
+          padding: 0;
+
+        }
+        &__button{
+          background-color: transparent;
+          height: 40px;
+          //flex:0 0 auto;
+          width: 50px;
+          background-size: 80%;
+          padding: 0;
+          background-position: center;
+          background-repeat: no-repeat;
+          border: none;
+          cursor: pointer;
+          outline: 0 !important;
+          background-image: url(../arrow-right.svg);
+          vertical-align: middle;
+          line-height: 16px;
+          margin-bottom: 1.5px;
+          border-bottom: 1px solid white;
+          margin-left: -5px;
         }
     }
     &__contact {
