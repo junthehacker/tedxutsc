@@ -109,6 +109,28 @@
     padding: 5 * $spacing-unit 0 5 * $spacing-unit 0;
   }
 }
+.partners{
+  &-main{
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  &-content{
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+    width: inherit;
+    padding: 20px;
+  }
+  &-logo{
+    overflow: hidden;
+    text-align: center;
+    &-resize{
+      height: 50px;
+      margin: 40px;
+      display: inline-block;
+    }
+  }
+}
 
 @include media-query($on-laptop) {
   .home {
