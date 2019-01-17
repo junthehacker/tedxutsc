@@ -249,6 +249,23 @@ h2 {
   overflow: hidden;
   padding: 100px 0 100px 0; }
 
+.partners-main {
+  width: 100%;
+  padding-bottom: 50px; }
+.partners-content {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 400;
+  width: inherit;
+  padding: 20px; }
+.partners-logo {
+  overflow: hidden;
+  text-align: center; }
+  .partners-logo-resize {
+    height: 50px;
+    margin: 40px;
+    display: inline-block; }
+
 @media screen and (max-width: 1280px) {
   .home__header__title h1 {
     font-size: 50px; }
