@@ -289,6 +289,11 @@ h2 {
     padding-bottom: 50px; }
   .home-marketing .home-marketing-img-container {
     display: none; } }
+.sponsors {
+  text-align: center; }
+  .sponsors img {
+    margin: 20px; }
+
 @media screen and (max-width: 450px) {
   .home__header__title {
     text-align: center; }
