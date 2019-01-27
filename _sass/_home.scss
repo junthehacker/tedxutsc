@@ -190,8 +190,11 @@
 
 .sponsors {
   text-align: center;
+  width: 100%;
+  padding: 40px;
   img {
     margin: 20px;
+    max-width: 80% !important;
   }
 }
 
