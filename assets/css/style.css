@@ -290,9 +290,12 @@ h2 {
   .home-marketing .home-marketing-img-container {
     display: none; } }
 .sponsors {
-  text-align: center; }
+  text-align: center;
+  width: 100%;
+  padding: 40px; }
   .sponsors img {
-    margin: 20px; }
+    margin: 20px;
+    max-width: 80% !important; }
 
 @media screen and (max-width: 450px) {
   .home__header__title {
