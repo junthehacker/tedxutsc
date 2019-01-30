@@ -685,3 +685,12 @@ h2 {
   .modal-xl {
     width: 90%;
     max-width: 1000px; } }
+.live {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif; }
+  .live h1 {
+    padding: 40px;
+    color: white;
+    opacity: 0.3; }
