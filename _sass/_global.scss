@@ -20,6 +20,7 @@ h2 {
   padding-left: 20px !important;
   padding-right: 20px !important;
   display: inline-block;
+  white-space: normal;
   &.btn-primary {
     text-transform: uppercase;
     background-color: $primary-color;
