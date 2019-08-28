@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="/assets/css/style.css?version=00b8c36_20190828_005538">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - TEDxUTSC</title>
+    <title>Form - TEDxUTSC</title>
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.png">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 </head>
@@ -30,7 +30,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item  active ">
+            <li class="nav-item ">
                 <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item ">
@@ -54,232 +54,71 @@
     </div>
 </nav>
 
-<header class="home__header row">
-    <img class="home__header__background" src="assets/wave-white.svg"/>
+<!-- GITHUB guide to pushing to google sheets: https://github.com/jamiewilson/form-to-google-sheets-->
 
-    <div class="col-lg-6 col-md-5"></div>
-    <div class="col-lg-6 col-md-7" style="z-index: 2;">
-        <div class="home__header__title">
-            <h1>Resonance</h1>
-            <p>February 2nd - U of T Scarborough</p>
-            <a class="btn btn-primary" href="/director-lead-application.html">
-                2020 Director/Lead<br/>Applications
-            </a>
-        </div>
-    </div>
-
+<header class="home__header__about">
     <div class="feature-row feature-row--right">
-
         <div class="container">
             <div class="feature-row__content">
                 <div class="feature-row__content-dec"></div>
                 <div class="feature-row__title">
-                    <label class="sub-section-label">OUR 2019 THEME</label>
-                    <h2>Energy that moves you</h2>
+                    <label class="sub-section-label">Express Your Interest</label>
+                    <h2>Want to join our team? Just fill out the form below</h2>
                 </div>
-                <p>
-                    Words have the ability to emanate and spread
-                    positive energy. They can provide us both the
-                    ideas and tools we can utilize for social change.
-                    We are excited to bring you ideas
-                    that will move you, ideas that resonate with you.<br/><br/><br/><br/>
-                </p>
+                <form accept-charset="UTF-8" name="submit-to-google-sheet" id="submit-to-google-sheet"> 
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>First Name:
+                                    <input type="text" name="first name" placeholder="First Name" class="form-control" required/>
+                                </label>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Last Name: 
+                                    <input type="text" name="last name" placeholder="Last Name" class="form-control" required/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Email:</label><br/>
+                                <input type="email" name="email" placeholder="Your Email" required />
+                            </div>
+                        </div>
+                        <label>Interested Position:</label><br/>
+                        <select name="department/position">
+                            <option value="Conference Development" >Conference Development</option>
+                            <option value="Marketing and Communication" >Marketing and Communication</option>
+                            <option value="Program Development" >Program Development</option>
+                            <option value="Unsure" > Not sure </option>
+                        </select>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>How did you hear about TEDxUTSC</label><br/>
+                                <input type="radio" name="how did you know?" value="Event" required>Event<br>
+                                <input type="radio" name="how did you know?" value="Referral" required>Referral<br>
+                                <input type="radio" name="how did you know?" value="Social Media" required>Social Media<br>
+                                <input type="radio" name="how did you know?" value="Other" required>Other 
+                            <div class="col-md-12"></div>
+                            <input type="hidden" name="utf8" value="✓">
+                            <button type="submit">Submit</button>
+                        </div>
+                        
+                    </div>
+                </form>
+
+                
+            </div>
+            <br />
+            <div id="success-message" class='alert collapse' >
+                <a class='close' data-hide='alert' onclick="hideMessage()">&times;</a>
+                <strong id="message"></strong>
             </div>
         </div>
-        <img class="feature-row--right__image" src="assets/home-header.jpeg"/>
+        
+        <img class="feature-row--right__image" src="assets/team-header.jpeg"/>
     </div>
 </header>
-
-<section class="home__featured-speakers">
-    <div class="home-gallery" id="home-gallery">
-    <div class="container">
-        <div class="home-gallery__title">
-            <button onClick="previousGalleryItem()" class="home-gallery__title__left-btn"></button>
-            <div class="home-gallery__title__content">Our 11 Speakers</div>
-            <button onClick="nextGalleryItem()" class="home-gallery__title__right-btn"></button>
-        </div>
-        <br/>
-        <ul class="home-gallery__items">
-            
-            <li class="home-gallery__items__item">
-                <img class="home-gallery__items__item__img" src="assets/speakers/axel.jpeg" alt="Axel Villamil"/>
-                <div class="home-gallery__items__item__label">
-                    <small>CEO, Designer</small>
-                    Axel Villamil
-                </div>
-            </li>
-            
-            <li class="home-gallery__items__item">
-                <img class="home-gallery__items__item__img" src="assets/speakers/shehna-2.png" alt="Shehna Javeed"/>
-                <div class="home-gallery__items__item__label">
-                    <small>ACADEMIC & LEARNING STRATEGIST</small>
-                    Shehna Javeed
-                </div>
-            </li>
-            
-            <li class="home-gallery__items__item">
-                <img class="home-gallery__items__item__img" src="assets/speakers/marlene.jpeg" alt="Marlene Goldman"/>
-                <div class="home-gallery__items__item__label">
-                    <small>English Professor</small>
-                    Marlene Goldman
-                </div>
-            </li>
-            
-            <li class="home-gallery__items__item">
-                <img class="home-gallery__items__item__img" src="assets/speakers/zayn.jpeg" alt="Zayn Khamis"/>
-                <div class="home-gallery__items__item__label">
-                    <small>MOLECULAR BIOLOGIST</small>
-                    Zayn Khamis
-                </div>
-            </li>
-            
-            <li class="home-gallery__items__item">
-                <img class="home-gallery__items__item__img" src="assets/speakers/jonathan.jpeg" alt="Jonathan Kay"/>
-                <div class="home-gallery__items__item__label">
-                    <small>JOURNALIST & AUTHOR</small>
-                    Jonathan Kay
-                </div>
-            </li>
-            
-            <li class="home-gallery__items__item">
-                <img class="home-gallery__items__item__img" src="assets/speakers/tahmid.jpeg" alt="Tahmid Hasib Khan"/>
-                <div class="home-gallery__items__item__label">
-                    <small>Global Health Student</small>
-                    Tahmid Hasib Khan
-                </div>
-            </li>
-            
-            <li class="home-gallery__items__item">
-                <img class="home-gallery__items__item__img" src="assets/speakers/sohaib.jpeg" alt="Sohaib Ahmed"/>
-                <div class="home-gallery__items__item__label">
-                    <small>COO & RESEARCHER</small>
-                    Sohaib Ahmed
-                </div>
-            </li>
-            
-            <li class="home-gallery__items__item">
-                <img class="home-gallery__items__item__img" src="assets/speakers/maya.jpeg" alt="Maya Cheaib"/>
-                <div class="home-gallery__items__item__label">
-                    <small>CRIMINOLOGY & SOCIO-LEGAL<br/>STUDIES MASTERS STUDENT</small>
-                    Maya Cheaib
-                </div>
-            </li>
-            
-            <li class="home-gallery__items__item">
-                <img class="home-gallery__items__item__img" src="assets/speakers/hartley.jpeg" alt="Hartley Jafine"/>
-                <div class="home-gallery__items__item__label">
-                    <small>ARTS & SCIENCES PROFFESOR</small>
-                    Hartley Jafine
-                </div>
-            </li>
-            
-            <li class="home-gallery__items__item">
-                <img class="home-gallery__items__item__img" src="assets/speakers/steve.jpeg" alt="Steve Russell"/>
-                <div class="home-gallery__items__item__label">
-                    <small>PHOTOJOURNALIST</small>
-                    Steve Russell
-                </div>
-            </li>
-            
-            <li class="home-gallery__items__item">
-                <img class="home-gallery__items__item__img" src="assets/speakers/arshiya.jpeg" alt="Arshiya Bhan"/>
-                <div class="home-gallery__items__item__label">
-                    <small>DANCER & FOUNDER<br/>OF FITNESS BRAND</small>
-                    Arshiya Bhan
-                </div>
-            </li>
-            
-        </ul>
-    </div>
-</div>
-
-</section>
-
-<section class="home__quote">
-    <div class="feature-row feature-row--left">
-
-        <div class="container">
-        <div class="feature-row__content">
-            <div class="feature-row__content-dec feature-row__content-dec--left"></div>
-            <div class="feature-row__quote">“Today is created here. Today,
-                TEDxUTSC showed why that’s
-                our tag line at UTSC. They inspired a better tomorrow!”
-            </div>
-            <label>MALCOM CAMPBELL<br/>FORMER VICE PRESIDENT OF RESEARCH, UTSC</label>
-        </div>
-        </div>
-
-        <img class="feature-row--left__image" src="assets/home-quote.jpeg"/>
-    </div>
-</section>
-
-<section class="home-marketing">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="home-marketing-content">
-                    <label class="sub-section-label">SEE THINGS DIFFERENTLY</label>
-                    <h2>Be inspired by new perspectives</h2>
-                    <p>We provide a platform for people from all walks of life to come together and share their unique stories to the others around them.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="home-marketing-img-container">
-                    <div class="img">
-                        <img src="assets/marketing-1.png" alt="SEE THINGS DIFFERENTLY" />
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="home-marketing-img-container">
-                    <div class="img">
-                        <img src="assets/marketing-2.png" />
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="home-marketing-content">
-                    <label class="sub-section-label">BUILD COMMUNITY</label>
-                    <h2>Interact with other passionate individuals</h2>
-                    <p>Just because you’re not a speaker, it doesn’t mean you can’t share your ideas. We give opportunities for our attendees to interact and connect with our speakers in a cohesive learning environment.</p>
-                </div>
-            </div>
-            <div class="partners-main">
-                <label class = partners-content>Proudly sponsored by U of T affinity partners:</label>
-                <div class="partners-logo">
-                    <a href="http://affinity.utoronto.ca"><img class="partners-logo-resize" src="assets/icons/mbna.png"/></a>
-                    <a href="http://affinity.utoronto.ca"><img class="partners-logo-resize" src="assets/icons/td.png"/></a>
-                </div>
-                <label class = partners-content>Discover the benefits of affinity products!</label>
-            </div>
-            <div class="sponsors">
-                <img src="assets/sponsors/utsc.png" alt="University of Toronto Scarborough" width="250px" />
-                <img src="assets/sponsors/utscctl.png" alt="University of Toronto Scarborough Center for Teaching and Learning" width="330px" />
-                <img src="assets/sponsors/utscdar.png" alt="University of Toronto Scarborough Development and Alumni Relations" width="470px" />
-
-                <p>Additional thanks to Office of the Vice-President & Principal, Office of the Vice-Principal Research, and Office of the Dean & Vice-Principal Academic.</p>
-
-                <img src="assets/sponsors/isc.png" alt="International Student Centre" width="250px" />
-                <img src="assets/sponsors/dsl.png" alt="Department of Student Life" width="320px" />
-                <img src="assets/sponsors/cheapreats.png" alt="CheaprEats" width="250px" />
-                <img src="assets/sponsors/fosterkia.jpg" alt="Foster KIA" width="300px" />
-                <img src="assets/sponsors/lains.jpg" alt="Lains" width="100px" />
-                <img src="assets/sponsors/loc.jpg" alt="Live on Chocolate" width="150px" />
-                <img src="assets/sponsors/jasmin.jpg" alt="Jaasmin" width="200px" />
-                <img src="assets/sponsors/nuage.png" alt="Nuage" width="150px" />
-                <img src="assets/sponsors/philthy%20philly.png" alt="Philthy Philly" width="150px" />
-                <img src="assets/sponsors/printcloud.png" alt="printcloud" width="220px" />
-                <img src="assets/sponsors/mentalunitygroup.jpg" alt="Mental Unity Group" width="150px" />
-                <img src="assets/sponsors/jb.png" width="150px" />
-                <img src="assets/sponsors/peatix.png" alt="Peatix" width="230px" />
-                <img src="assets/sponsors/halal.jpg" alt="Halal Meals" width="130px" />
-            </div>
-        </div>
-    </div>
-</section>
 
 
 <section class="buy-tickets">
@@ -378,90 +217,36 @@ console.log("Want to help us out? https://github.com/junthehacker/tedxutsc");
 
 
     
-        /**
- * Gallery closure
- */
-(function () {
-    const galleryId = "home-gallery";
-    const itemWidth = 344;
-    let currentItem = 0;
 
-    /**
-     * Initialize home gallery
-     */
-    function __initializeGallery(galleryId) {
-        let container = $(`#${galleryId}`);
-        let items = $(`#${galleryId} .home-gallery__items__item`);
-        let itemsContainer = $(`#${galleryId} .home-gallery__items`);
-
-
-        // Get total with of all items, and set width to contain all of them
-        let totalWidth = 0;
-        $.each(items, function (_, item) {
-            totalWidth += $(item).outerWidth()
-        });
-        if ($(window).width() > 600){
-            $(itemsContainer).css({width: totalWidth + 800 + 'px'});
-        }
-        // Move gallery to middle
-        __switchGalleryActiveItem(Math.floor(items.length / 2));
-
-        // Fade gallery in
-        setTimeout(function () {
-            $(container).animate({opacity: 1});
-        }, 500);
-    }
-
-    /**
-     * Switch currently active item within the gallery
-     */
-    function __switchGalleryActiveItem(id) {
-        currentItem = id;
-        let itemsContainer = $(`#${galleryId} .home-gallery__items`);
-        let items = $(`#${galleryId} .home-gallery__items__item`);
-
-        $(items).removeClass("home-gallery__items__item--active");
-        $(items[id]).addClass("home-gallery__items__item--active");
-
-        const baseOffset = ($(`#${galleryId} .container`).width() / 2 - itemWidth / 2); // Base left offset
-        $(itemsContainer).animate({
-            left: baseOffset - id * itemWidth
-        }, 500);
-    }
-
-    /**
-     * Get total gallery item count
-     * @returns {int}
-     */
-    function getGalleryItemCount() {
-        return $(`#${galleryId} .home-gallery__items__item`).length;
-    }
-
-    /**
-     * Switch to next gallery item
-     */
-    function nextGalleryItem() {
-        currentItem = (currentItem + 1) % getGalleryItemCount();
-        __switchGalleryActiveItem(currentItem);
-    }
-
-    /**
-     * Switch to previous gallery item
-     */
-    function previousGalleryItem() {
-        currentItem = (currentItem - 1) % getGalleryItemCount();
-        if (currentItem < 0) currentItem = getGalleryItemCount() - 1;
-        __switchGalleryActiveItem(currentItem);
-    }
-
-    // Expose functions to global context
-    window.nextGalleryItem = nextGalleryItem;
-    window.previousGalleryItem = previousGalleryItem;
-    __initializeGallery(galleryId);
-
-})();
     
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw-iLISQsCKhF6pzalZuNLrZ3p9Ybc8NrWheucLbENOcL9IHRoX/exec';
+const form = document.forms['submit-to-google-sheet'];
 
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, {method: 'POST', mode: 'no-cors', body: new FormData(form)})
+        .then(res => {
+            if(res.status < 400){
+                return;
+            } else {
+                throw new Error('Fail');
+            }
+        })
+        .then(() => {
+            $("#success-message").attr("class", "alert alert-success alert-dismissible");
+            document.getElementById("message").innerText = "Success!";
+            document.getElementById("submit-to-google-sheet").reset();
+            $('.alert').show();
+        }).catch(() => {
+            $("#success-message").attr("class", "alert alert-danger alert-dismissible");
+            document.getElementById("message").innerText = "Error!";
+            $('.alert').show();
+        });
+}); 
+
+function hideMessage() {
+    $('.' + $('.close').attr('data-hide')).hide();
+}
     
 </script>
 
