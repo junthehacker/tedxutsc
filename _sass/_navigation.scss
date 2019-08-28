@@ -1,0 +1,86 @@
+@keyframes slide-from-top {
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.navbar {
+  top: -100px;
+  opacity: 0;
+  animation: slide-from-top 2s ease 2s 1 normal forwards;
+  background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+  transition: all ease 0.3s;
+  z-index: 99;
+  //background-color: transparent;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  position: fixed;
+  width: 100%;
+
+  &.darken {
+    transition: all ease 0.3s;
+    background: -moz-linear-gradient(top, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,1) 50%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 50%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+  }
+
+  .nav-item {
+    padding-left: 40px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    color: white;
+    border-bottom: rgba(255,255,255,0) 2px solid;
+    .nav-link {
+      color: white;
+    }
+    &:hover,
+    &.active {
+      .nav-link {
+        color: white;
+        border-bottom: rgba(255,255,255,0.2) 2px solid;
+      }
+    }
+  }
+
+  .nav-item.active {
+    .nav-link {
+
+    }
+  }
+}
+
+.navbar-brand {
+  img {
+    height: 58px;
+  }
+}
+
+@include media-query($on-laptop) {
+  .navbar {
+    .nav-item,
+    .nav-item.active {
+      padding-left: 20px;
+    }
+  }
+}
+
+@include media-query($on-phone) {
+  .navbar-brand {
+    img {
+      height: 40px;
+    }
+  }
+}

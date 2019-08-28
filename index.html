@@ -1,0 +1,130 @@
+---
+layout: home
+title: Home
+event_title: Resonance
+event_subtitle: February 2nd - U of T Scarborough
+gallery:
+    - speaker: Axel Villamil
+      title: CEO, Designer
+      img: assets/speakers/axel.jpeg
+      talk_title: Harnessing the Ultimate Power of Space
+    - speaker: Shehna Javeed
+      title: ACADEMIC & LEARNING STRATEGIST
+      img: assets/speakers/shehna-2.png
+      talk_title: Harnessing the Ultimate Power of Space
+    - speaker: Marlene Goldman
+      title: English Professor
+      img: assets/speakers/marlene.jpeg
+      talk_title: Harnessing the Ultimate Power of Space
+    - speaker: Zayn Khamis
+      title: MOLECULAR BIOLOGIST
+      img: assets/speakers/zayn.jpeg
+      talk_title: Harnessing the Ultimate Power of Space
+    - speaker: Jonathan Kay
+      title: JOURNALIST & AUTHOR
+      img: assets/speakers/jonathan.jpeg
+      talk_title: Harnessing the Ultimate Power of Space
+    - speaker: Tahmid Hasib Khan
+      title: Global Health Student
+      img: assets/speakers/tahmid.jpeg
+      talk_title: Harnessing the Ultimate Power of Space
+    - speaker: Sohaib Ahmed
+      title: COO & RESEARCHER
+      img: assets/speakers/sohaib.jpeg
+      talk_title: none
+    - speaker: Maya Cheaib
+      title: CRIMINOLOGY & SOCIO-LEGAL<br/>STUDIES MASTERS STUDENT
+      img: assets/speakers/maya.jpeg
+      talk_title: none
+    - speaker: Hartley Jafine
+      title: ARTS & SCIENCES PROFFESOR
+      img: assets/speakers/hartley.jpeg
+      talk_title: none
+    - speaker: Steve Russell
+      title: PHOTOJOURNALIST
+      img: assets/speakers/steve.jpeg
+      talk_title: none
+    - speaker: Arshiya Bhan
+      title: DANCER & FOUNDER<br/>OF FITNESS BRAND
+      img: assets/speakers/arshiya.jpeg
+      talk_title: Harnessing the Ultimate Power of Space
+marketing:
+    - tag: SEE THINGS DIFFERENTLY
+      title: Be inspired by new perspectives
+      content: We provide a platform for people from all walks of life to come together and share their unique stories to the others around them.
+      img: assets/marketing-1.png
+    - tag: BUILD COMMUNITY
+      title: Interact with other passionate individuals
+      content: Just because you’re not a speaker, it doesn’t mean you can’t share your ideas. We give opportunities for our attendees to interact and connect with our speakers in a cohesive learning environment.
+      img: assets/marketing-2.png
+---
+
+{% include home_header.html %}
+
+<section class="home-marketing">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="home-marketing-content">
+                    <label class="sub-section-label">{{ page.marketing[0].tag }}</label>
+                    <h2>{{ page.marketing[0].title }}</h2>
+                    <p>{{ page.marketing[0].content }}</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="home-marketing-img-container">
+                    <div class="img">
+                        <img src="{{ page.marketing[0].img }}" alt="{{ page.marketing[0].tag }}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="home-marketing-img-container">
+                    <div class="img">
+                        <img src="{{ page.marketing[1].img }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="home-marketing-content">
+                    <label class="sub-section-label">{{ page.marketing[1].tag }}</label>
+                    <h2>{{ page.marketing[1].title }}</h2>
+                    <p>{{ page.marketing[1].content }}</p>
+                </div>
+            </div>
+            <div class="partners-main">
+                <label class = partners-content>Proudly sponsored by U of T affinity partners:</label>
+                <div class="partners-logo">
+                    <a href="http://affinity.utoronto.ca"><img class="partners-logo-resize" src="assets/icons/mbna.png"/></a>
+                    <a href="http://affinity.utoronto.ca"><img class="partners-logo-resize" src="assets/icons/td.png"/></a>
+                </div>
+                <label class = partners-content>Discover the benefits of affinity products!</label>
+            </div>
+            <div class="sponsors">
+                <img src="assets/sponsors/utsc.png" alt="University of Toronto Scarborough" width="250px" />
+                <img src="assets/sponsors/utscctl.png" alt="University of Toronto Scarborough Center for Teaching and Learning" width="330px" />
+                <img src="assets/sponsors/utscdar.png" alt="University of Toronto Scarborough Development and Alumni Relations" width="470px" />
+
+                <p>Additional thanks to Office of the Vice-President & Principal, Office of the Vice-Principal Research, and Office of the Dean & Vice-Principal Academic.</p>
+
+                <img src="assets/sponsors/isc.png" alt="International Student Centre" width="250px" />
+                <img src="assets/sponsors/dsl.png" alt="Department of Student Life" width="320px" />
+                <img src="assets/sponsors/cheapreats.png" alt="CheaprEats" width="250px" />
+                <img src="assets/sponsors/fosterkia.jpg" alt="Foster KIA" width="300px" />
+                <img src="assets/sponsors/lains.jpg" alt="Lains" width="100px" />
+                <img src="assets/sponsors/loc.jpg" alt="Live on Chocolate" width="150px" />
+                <img src="assets/sponsors/jasmin.jpg" alt="Jaasmin" width="200px" />
+                <img src="assets/sponsors/nuage.png" alt="Nuage" width="150px" />
+                <img src="assets/sponsors/philthy%20philly.png" alt="Philthy Philly" width="150px" />
+                <img src="assets/sponsors/printcloud.png" alt="printcloud" width="220px" />
+                <img src="assets/sponsors/mentalunitygroup.jpg" alt="Mental Unity Group" width="150px" />
+                <img src="assets/sponsors/jb.png" width="150px" />
+                <img src="assets/sponsors/peatix.png" alt="Peatix" width="230px" />
+                <img src="assets/sponsors/halal.jpg" alt="Halal Meals" width="130px" />
+            </div>
+        </div>
+    </div>
+</section>

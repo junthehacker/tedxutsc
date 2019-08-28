@@ -1,0 +1,207 @@
+@keyframes fade-in {
+  from { opacity: 0 }
+  to {opacity: 1}
+}
+
+
+.team{
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../../assets/wave-black.svg);
+  background-size: cover;
+  padding-top: 4 * $spacing-unit;
+  padding-bottom: 4 * $spacing-unit;
+  width: 100%;
+  overflow: hidden;
+  &__label {
+    font-family: $libre-font;
+    font-size: 40px;
+    font-weight: bold;
+    align-self: left;
+    padding-left: $spacing-unit;
+    padding-right: $spacing-unit;
+  }
+  &__sub-section{
+    font-family: $primary-font;
+    font-size: 15px;
+    font-weight: 500;
+    align-self: left;
+    padding-left: $spacing-unit;
+    padding-right: $spacing-unit;
+  }
+  &__picture{
+    width: 100%;
+  }
+
+  &__border {
+    padding-left: 165px;
+    padding-right: 165px;
+    padding-bottom: 50px;
+  }
+  &__member-item {
+    position: relative;
+    margin: 10px;
+    transition: all ease 0.3s;
+    &:hover {
+      transform: scale(1.2);
+      transition: all ease 0.3s;
+      z-index: 10;
+      box-shadow: rgba(0,0,0,0.6) 0 0 30px;
+    }
+  }
+  &__member-name{
+    bottom: 20px;
+    font-family: $primary-font;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 13px;
+    letter-spacing: 2px;
+    color: white;
+    text-transform: uppercase;
+  }
+  &__member-position{
+    display: block;
+    font-family: $libre-font;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    padding-top: 5px;
+    left: 10px;
+    color: white;
+  }
+  &__image{
+    position: relative;
+  }
+  &__name-gradient{
+    padding: 20px;
+    padding-bottom: 15px;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 11%, black 47%, black 65%, black 92%, black 96%);
+  }
+  &__section2{
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../assets/wave-black.svg);
+    background-size: auto;
+  }
+  &__experience{
+    font-family: $libre-font;
+    color: white;
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 109px;
+  }
+  &__explanation{
+    font-family: $fira-font;
+    font-size: 27px;
+    line-height: 29px;
+    font-weight: 100;
+    color: white;
+
+  }
+  &__experience-box{
+    z-index: 2;
+    position: relative;
+    padding-bottom: 50px;
+    text-align: center;
+    width: inherit;
+    margin-top: 100px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 47%, black 65%, black 72%, black 96%);
+  }
+}
+
+.home__header__about {
+  width: 100%;
+  overflow: hidden;
+  &--large-pb {
+    padding-bottom: 200px;
+  }
+}
+
+.home__header__about .feature-row--right {
+  margin-top: 180px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 90%, black 47%, black 65%, black 73%, black 80%);
+
+}
+.feature-row {
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+.feature-row--right__image__about{
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    max-width: 70%;
+    z-index: -99;
+}
+
+@include media-query($on-laptop) {
+  .team {
+    &__member-name{
+      font-size: 11px;
+      margin-bottom: 0;
+    }
+    &__member-position{
+      font-size: 14px;
+    }
+    &__name-gradient {
+      padding: 15px;
+      padding-bottom: 10px;
+    }
+    &__experience-box {
+      margin-top: 50px;
+    }
+    &__experience{
+      font-size: 60px;
+    }
+  }
+}
+
+@include media-query($on-tablet) {
+  .team {
+    &__experience-box {
+      margin-top: 50px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__experience{
+      font-size: 60px;
+    }
+    &__explanation {
+      font-size: 14px;
+      line-height: 15px;
+    }
+  }
+}
+
+@include media-query($on-phone) {
+  .team {
+    &__member-item {
+      margin: 30px;
+      &:hover {
+        transform: scale(1);
+      }
+    }
+    &__member-name{
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    &__member-position{
+      font-size: 20px;
+    }
+    &__name-gradient {
+      padding: 15px;
+      padding-bottom: 10px;
+    }
+  }
+}

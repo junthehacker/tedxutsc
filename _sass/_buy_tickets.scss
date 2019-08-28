@@ -1,0 +1,15 @@
+.buy-tickets {
+  padding: 7 * $spacing-unit $spacing-unit 7 * $spacing-unit $spacing-unit;
+  background-image: url(../../assets/footer-background.jpeg);
+  background-size: cover;
+  text-align: center;
+  color: white;
+  background-position: bottom;
+  background-attachment: fixed;
+  font-family: $primary-font;
+  letter-spacing: 2px;
+  h2 {
+    font-weight: 700;
+    padding: $spacing-unit 0 $spacing-unit 0;
+  }
+}

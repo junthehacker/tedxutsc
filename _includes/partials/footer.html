@@ -1,0 +1,44 @@
+<section class="buy-tickets">
+    <div class="container">
+        <label class="sub-section-label">JOIN THE MOVEMENT</label>
+        <h2>Ready to be inspired?</h2>
+        <button class="btn btn-primary" disabled>
+            <i class="fa fa-play" aria-hidden="true"></i>
+                    Watch Live
+        </button>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="footer__contact">
+                    <ul>
+                        <li><a href="https://www.facebook.com/TEDxUTSC/"><img src="assets/icons/facebook.png" alt="Facebook" /></a></li>
+                        <li><a href="https://www.instagram.com/tedxutsc/"><img src="assets/icons/instagram.png" alt="Instagram" /></a></li>
+                        <li><a href="https://twitter.com/TEDxUTSC"><img src="assets/icons/twitter.png" alt="Twitter" /></a></li>
+                        <li><a href="https://www.youtube.com/user/TEDxUTSC"><img src="assets/icons/youtube.png" alt="YouTube" /></a></li>
+                        <li><a href="mailto:info@tedxutsc.com"><img src="assets/icons/email.png" alt="Email" /></a></li>
+                    </ul>
+                    <div class="footer__copyright">
+                        <small>{{ site.env }} {{ site.build }}</small>
+                        &copy; TEDXUTSC 2018
+                    </div>
+                </div>
+                <nav class="footer__nav">
+                    <ul>
+                        <li><a href="{{ site.baseurl }}/">Home</a></li>
+                        <li><a href="{{ site.baseurl }}/team.html">Team</a></li>
+                        <li><a href="{{ site.baseurl }}/speakers.html">Speakers</a></li>
+                        <li><a href="https://www.youtube.com/user/TEDxUTSC">Past Talks</a></li>
+                        <li><a href="{{ site.baseurl }}/interestForm.html">Interest</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% include utilities/loading.html %}
+{% include partials/scripts.html %}

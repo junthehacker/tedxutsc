@@ -1,0 +1,19 @@
+<script>
+    // Third-party dependencies
+    {% include_relative /assets/js/vendor/jquery.3.2.1.min.js %}
+    {% include_relative /assets/js/vendor/popper.min.js %}
+    {% include_relative /assets/js/vendor/bootstrap.min.js %}
+
+    // App scripts
+    {% include_relative /assets/js/copyright.js %}
+    {% include_relative /assets/js/utilities/loading.js %}
+    {% include_relative /assets/js/partials/navigation.js %}
+
+    {% if(page.title == 'Home') %}
+        {% include_relative /assets/js/home/gallery.js %}
+    {% endif %}
+
+    {% if(page.title == 'Form') %}
+        {% include_relative /assets/js/form/interestForm.js %}
+    {% endif %}
+</script>

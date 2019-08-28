@@ -1,0 +1,148 @@
+@import "variables";
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-family: $primary-font;
+}
+
+.container {
+  max-width: 1300px;
+  padding: 0;
+}
+
+.btn {
+  border: none;
+  border-radius: 0;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  display: inline-block;
+  white-space: normal;
+  &.btn-primary {
+    text-transform: uppercase;
+    background-color: $primary-color;
+    &:active {
+      background-color: $primary-color;
+    }
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+.feature-row {
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  width: 100%;
+  padding: 100px;
+  &:hover {
+    .feature-row__content-dec {
+      left: -120px;
+      transition: left ease 0.3s;
+      &--left {
+        left: auto;
+        right: -20px;
+        transition: right ease 0.3s;
+      }
+    }
+  }
+  &__quote {
+    font-size: 30px;
+  }
+  &--right {
+    &__image {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      max-width: 70%;
+      max-height: 120%;
+    }
+  }
+  &__content-dec {
+    background-color: $primary-color;
+    width: 220px;
+    height: 12px;
+    position: absolute;
+    z-index: -99;
+    transform: rotateZ(-45deg);
+    left: -50px;
+    top: 50px;
+    transition: left ease 0.3s;
+    &--left {
+      transform: rotateZ(45deg);
+      left: auto;
+      right: 100px;
+      top: 100px;
+      transition: right ease 0.3s;
+    }
+  }
+  &--left {
+    text-align: right;
+    &__image {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      max-width: 70%;
+      z-index: -99;
+    }
+  }
+  &__content {
+    z-index: 2;
+    display: inline-block;
+    color: white;
+    max-width: 40%;
+    position: relative;
+    text-align: left;
+    padding: $spacing-unit;
+    h2 {
+      font-size: 40px;
+    }
+    p {
+      font-family: 'Fira Sans', sans-serif;
+      padding-top: 15px;
+    }
+  }
+}
+
+
+.sub-section-label {
+  font-family: $primary-font;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+@include media-query($on-laptop) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+@include media-query($on-tablet) {
+  .container {
+    max-width: 900px;
+  }
+  .feature-row {
+    padding: 50px;
+    &--right {
+    }
+    &__content {
+      max-width: 100%;
+    }
+  }
+}
+
+@include media-query($on-palm) {
+  .feature-row {
+    &__content {
+      h2 {
+        font-size: 24px;
+      }
+    }
+  }
+}

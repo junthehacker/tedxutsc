@@ -1,0 +1,96 @@
+@import "variables";
+
+.home-gallery {
+  opacity: 0;
+  font-family: $primary-font;
+  overflow-x: hidden;
+  &__title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    &__content {
+      flex:1 1 auto;
+    }
+    &__left-btn,
+    &__right-btn {
+      background-color: white;
+      height: 50px;
+      flex:0 0 auto;
+      width: 100px;
+      background-size: 80%;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: none;
+      cursor: pointer;
+      outline: 0 !important;
+    }
+    &__left-btn {
+      background-image: url(../arrow-left.svg);
+    }
+    &__right-btn {
+      background-image: url(../arrow-right.svg);
+    }
+  }
+  &__items {
+    list-style: none;
+    padding: 0;
+    left: 0;
+    position: relative;
+    white-space: nowrap;
+    overflow-y: hidden;
+    display: inline-block;
+    &__item {
+      vertical-align: middle;
+      display: inline-block;
+      position: relative;
+      width: 300px;
+      height: 390px;
+      cursor: pointer;
+      overflow: hidden;
+      margin: 20px;
+      transition: all ease 0.3s;
+      &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+      &:hover,
+      &--active {
+        .home-gallery__items__item__label {
+          opacity: 1;
+          transition: opacity ease 0.5s;
+        }
+      }
+      &__label {
+        small {
+          display: block;
+          font-size: 13px;
+          text-transform: uppercase;
+        }
+        transition: opacity ease 0.5s;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        padding: 20px;
+        padding-top: 60px;
+        font-size: 20px;
+        font-weight: 500;
+        opacity: 0;
+        background: -moz-linear-gradient(top, rgba(0,0,0,0) 11%, rgba(0,0,0,1) 47%, rgba(0,0,0,1) 65%, rgba(0,0,0,1) 92%, rgba(0,0,0,1) 96%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(0,0,0,0) 11%,rgba(0,0,0,1) 47%,rgba(0,0,0,1) 65%,rgba(0,0,0,1) 92%,rgba(0,0,0,1) 96%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 11%,rgba(0,0,0,1) 47%,rgba(0,0,0,1) 65%,rgba(0,0,0,1) 92%,rgba(0,0,0,1) 96%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+      }
+      &--active {
+        transform: scale(1.1);
+        transition: all ease 0.3s;
+      }
+    }
+  }
+}

@@ -1,0 +1,172 @@
+---
+layout: home
+title: Team
+team:
+  - title: Leads
+    members:
+      - name: Sakina Gadriwala
+        position: Chair
+        image: assets/team/sakina.jpeg
+      - name: Fredriz Cantilado
+        position: Conference Development
+        image: assets/team/fedriz.jpeg
+      - name: Shagny Shanmugan
+        position: Marketing & Communications
+        image: assets/team/shagny.jpeg
+      - name: Piyal Sarker
+        position: Program Development
+        image: assets/team/piyal-2.jpeg
+  - title: Directors
+    members:
+      - name: Rimshah Rahman
+        position: Events
+        image: assets/team/rimshah.jpeg
+      - name: Jun Zheng
+        position: Information Technology
+        image: assets/team/jun.jpeg
+      - name: Maisha Mustanzir
+        position: Speaker Relations - Internal
+        image: assets/team/maisha.jpeg
+      - name: Aaheli Mukherjee
+        position: Productions - Technical
+        image: assets/team/aaheli.jpeg
+      - name: Winky Cai
+        position: Productions - Talents
+        image: assets/team/winky.jpeg
+      - name: Vanshika Agarwal
+        position: Speaker Relations - Internal
+        image: assets/team/vanshika.jpeg
+      - name: Joy Panjaitan
+        position: Design
+        image: assets/team/joy.jpeg
+      - name: Tariq Al Hashim
+        position: Partnerships
+        image: assets/team/tariq.jpeg
+      - name: Michelle Godwin
+        position: Partnerships
+        image: assets/team/michelle.jpeg
+      - name: Nazrin Aliyeva
+        position: Director of Finance
+        image: assets/team/nazrin.jpeg
+      - name: Kartavi Patel
+        position: Speaker Relations  - Alumni & Students
+        image: assets/team/kartavi.jpeg
+      - name: William Song
+        position: Communications
+        image: assets/team/william.jpeg
+      - name: Daniel Gomes
+        position: Communications
+        image: assets/team/daniel.jpeg
+      - name: Rhythm Sachdeva
+        position: Speaker Relations - External
+        image: assets/team/rhythm.jpg
+  - title: Associates
+    members:
+      - name: Shalizeh Minaee
+        position: Program Development
+        image: assets/team/shalizeh.jpeg
+      - name: Christina Wang
+        position: Design
+        image: assets/team/christina.jpeg
+      - name: Sakshaat Choyikandi
+        position: Events
+        image: assets/team/saakshat.jpeg
+      - name: Khadija Rasid
+        position: Program Development
+        image: assets/team/khadija.jpeg
+      - name: Sharjeel Haider
+        position: Information Technology
+        image: assets/team/sharjeel.jpeg
+      - name: Tahsin Sultana
+        position: Finance
+        image: assets/team/tahsin.jpeg
+      - name: Jaclyn Yan
+        position: Partnerships
+        image: assets/team/jaclyn.jpeg
+      - name: Saira Shafiq
+        position: Program Development
+        image: assets/team/saira.jpeg
+      - name: Chiara D’Cruz
+        position: Productions - Technical
+        image: assets/team/chiara.jpeg
+      - name: Abhi Amin
+        position: Program Development
+        image: assets/team/abhi.jpeg
+      - name: Deandra Sookram
+        position: Events
+        image: assets/team/deandra.jpeg
+      - name: Kirthana Vijit
+        position: Program Development
+        image: assets/team/kirthana.jpeg
+      - name: Eesha Chaudry
+        position: Program Development
+        image: assets/team/eesha.jpeg
+      - name: Vaamitha Varathalingam
+        position: Productions - Talent
+        image: assets/team/vaamitha.jpeg
+      - name: Sarah Quershi
+        position: Productions - Technical
+        image: assets/team/sarah.jpeg
+---
+
+
+<header class="home__header__about">
+    <div class="feature-row feature-row--right">
+        <div class="container">
+            <div class="feature-row__content">
+                <div class="feature-row__content-dec"></div>
+                <div class="feature-row__title">
+                    <label class="sub-section-label">OUR TEAM</label>
+                    <h2>We aspire to start a movement</h2>
+                </div>
+                <p>
+                    Since 2012,TEDxUTSC has independently organized a
+                    platform for our community's sharpest visionaries to
+                    inspire and captivate Toronto, GTA, and the global audience.
+                </p>
+            </div>
+        </div>
+        <div class="team__experience-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4" style="opacity: 0; animation: fade-in 2s ease 2s 1 normal forwards;">
+                        <label class="team__experience">1</label>
+                        <h2 class="team__explanation">Stage</h2>
+                    </div>
+                    <div class="col-4" style="opacity: 0; animation: fade-in 2s ease 2.5s 1 normal forwards;">
+                        <label class="team__experience">7</label>
+                        <h2 class="team__explanation">Years of <br/>Storytelling</h2>
+                    </div>
+                    <div class="col-4" style="opacity: 0; animation: fade-in 2s ease 3s 1 normal forwards;">
+                        <label class="team__experience">27</label>
+                        <h2 class="team__explanation">Countries that live<br/>streamed our event</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="feature-row--right__image" src="assets/team-header.jpeg"/>
+    </div>
+</header>
+
+<section class="team">
+    <div class="container">
+        <label class="team__sub-section">MEET OUR 2019 TEAM</label>
+        {% for section in page.team %}
+        <h2 class="team__label">{{ section.title }}</h2>
+        <div class="row">
+            {% for member in section.members %}
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="team__member-item">
+                    <img src="{{ member.image }}" class="team__picture"/>
+                    <div class="team__name-gradient">
+                        <label class="team__member-name">{{ member.name }}</label>
+                        <label class="team__member-position">{{ member.position }}</label>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <br/><br/>
+        {% endfor %}
+    </div>
+</section>

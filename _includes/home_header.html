@@ -1,0 +1,57 @@
+<header class="home__header row">
+    <img class="home__header__background" src="assets/wave-white.svg"/>
+
+    <div class="col-lg-6 col-md-5"></div>
+    <div class="col-lg-6 col-md-7" style="z-index: 2;">
+        <div class="home__header__title">
+            <h1>{{ page.event_title }}</h1>
+            <p>{{ page.event_subtitle }}</p>
+            <a class="btn btn-primary" href="{{ site.baseurl }}/director-lead-application.html">
+                2020 Director/Lead<br/>Applications
+            </a>
+        </div>
+    </div>
+
+    <div class="feature-row feature-row--right">
+
+        <div class="container">
+            <div class="feature-row__content">
+                <div class="feature-row__content-dec"></div>
+                <div class="feature-row__title">
+                    <label class="sub-section-label">OUR 2019 THEME</label>
+                    <h2>Energy that moves you</h2>
+                </div>
+                <p>
+                    Words have the ability to emanate and spread
+                    positive energy. They can provide us both the
+                    ideas and tools we can utilize for social change.
+                    We are excited to bring you ideas
+                    that will move you, ideas that resonate with you.<br/><br/><br/><br/>
+                </p>
+            </div>
+        </div>
+        <img class="feature-row--right__image" src="assets/home-header.jpeg"/>
+    </div>
+</header>
+
+<section class="home__featured-speakers">
+    {% include home_gallery.html %}
+</section>
+
+<section class="home__quote">
+    <div class="feature-row feature-row--left">
+
+        <div class="container">
+        <div class="feature-row__content">
+            <div class="feature-row__content-dec feature-row__content-dec--left"></div>
+            <div class="feature-row__quote">“Today is created here. Today,
+                TEDxUTSC showed why that’s
+                our tag line at UTSC. They inspired a better tomorrow!”
+            </div>
+            <label>MALCOM CAMPBELL<br/>FORMER VICE PRESIDENT OF RESEARCH, UTSC</label>
+        </div>
+        </div>
+
+        <img class="feature-row--left__image" src="assets/home-quote.jpeg"/>
+    </div>
+</section>

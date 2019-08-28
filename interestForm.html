@@ -1,0 +1,77 @@
+---
+layout: home
+title: Form
+row:
+    - title: Name
+      fields:
+        - name: First Name
+        - name: Last Name
+    - title: Email
+    - title: Position
+    - title: How did you hear about us?
+---
+<!-- GITHUB guide to pushing to google sheets: https://github.com/jamiewilson/form-to-google-sheets-->
+
+<header class="home__header__about">
+    <div class="feature-row feature-row--right">
+        <div class="container">
+            <div class="feature-row__content">
+                <div class="feature-row__content-dec"></div>
+                <div class="feature-row__title">
+                    <label class="sub-section-label">Express Your Interest</label>
+                    <h2>Want to join our team? Just fill out the form below</h2>
+                </div>
+                <form accept-charset="UTF-8" name="submit-to-google-sheet" id="submit-to-google-sheet"> 
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>First Name:
+                                    <input type="text" name="first name" placeholder="First Name" class="form-control" required/>
+                                </label>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Last Name: 
+                                    <input type="text" name="last name" placeholder="Last Name" class="form-control" required/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Email:</label><br/>
+                                <input type="email" name="email" placeholder="Your Email" required />
+                            </div>
+                        </div>
+                        <label>Interested Position:</label><br/>
+                        <select name="department/position">
+                            <option value="Conference Development" >Conference Development</option>
+                            <option value="Marketing and Communication" >Marketing and Communication</option>
+                            <option value="Program Development" >Program Development</option>
+                            <option value="Unsure" > Not sure </option>
+                        </select>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>How did you hear about TEDxUTSC</label><br/>
+                                <input type="radio" name="how did you know?" value="Event" required>Event<br>
+                                <input type="radio" name="how did you know?" value="Referral" required>Referral<br>
+                                <input type="radio" name="how did you know?" value="Social Media" required>Social Media<br>
+                                <input type="radio" name="how did you know?" value="Other" required>Other 
+                            <div class="col-md-12"></div>
+                            <input type="hidden" name="utf8" value="✓">
+                            <button type="submit">Submit</button>
+                        </div>
+                        
+                    </div>
+                </form>
+
+                
+            </div>
+            <br />
+            <div id="success-message" class='alert collapse' >
+                <a class='close' data-hide='alert' onclick="hideMessage()">&times;</a>
+                <strong id="message"></strong>
+            </div>
+        </div>
+        
+        <img class="feature-row--right__image" src="assets/team-header.jpeg"/>
+    </div>
+</header>

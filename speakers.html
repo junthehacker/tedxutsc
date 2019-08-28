@@ -1,0 +1,136 @@
+---
+layout: home
+title: Speakers
+team:
+  - title: Speakers
+    members:
+      - name: Axel Villamil
+        id: axel
+        position: CEO, Designer
+        image: assets/speakers/axel.jpeg
+        bio: >
+            Axel is a director, developer, and an artist. Not only that, he is also the CEO and founder of 3 companies, and he's still in his twenties! Combining his passion for beautiful designs, and knowledge in technical practices, Axel is motivated to create breathtaking and immersive products. Axel will be talking about the difference between safe and passion; about normalizing the un-norm – "it is only crazy until you do it, and it is only innovation until that crazy has happened".
+      - name: Shehna Javeed
+        id: shehna
+        position: ACADEMIC & LEARNING STRATEGIST
+        image: assets/speakers/shehna-2.png
+        bio: >
+            You have definitely seen her on campus here at UTSC because she is a staff member at the Department of Academic Advising and Careers as an academic & learning strategist. She will be talking about the idea of the self-construct by intertwining the stories of her three female students with her own story and experiences.
+      - name: Marlene Goldman
+        id: marlene
+        position: English Professor
+        image: assets/speakers/marlene.jpeg
+        bio: >
+            Marlene is one of our English professors here at UTSC, and she is also an accomplished writer and filmmaker. She will be speaking about three elements intertwined together.<br/>a) Munro studies<br/>b) theories of the short story and<br/>c) the genre of the memoir.
+      - name: Zayn Khamis
+        id: zayn
+        position: MOLECULAR BIOLOGIST
+        image: assets/speakers/zayn.jpeg
+        bio: >
+            Zayn is a highly accomplished molecular biologist, who would be speaking about the navigation of our medical system, and asking how medicine, technology and history has interjected in a personal standpoint.
+      - name: Jonathan Kay
+        id: jonathan
+        position: JOURNALIST & AUTHOR
+        image: assets/speakers/jonathan.jpeg
+        bio: >
+            Jonathan is a Canadian journalist, the current Canadian editor of the online magazine, Quilette; he is also the former editor-in-chief of The Walrus, an accomplished writer, and a decorated alumni at the National Post. He will use the TEDxUTSC platform to discuss the balance of respecting one’s freedom of speech as well as one’s right to not be subject to hate speech.
+      - name: Tahmid Hasib Khan
+        id: tahmid
+        position: Global Health Student
+        image: assets/speakers/tahmid.jpeg
+        bio: >
+            Tahmid is our student speaker, and definitely has an eye-opening talk, and leaves us with this gem: "We don’t know our capability unless we are faced with a situation that changes our entire lives forever while the whole world watches. You begin to appreciate life a lot more."
+      - name: Sohaib Ahmed
+        id: sohaib
+        position: COO & RESEARCHER
+        image: assets/speakers/sohaib.jpeg
+        bio: >
+            Sohaib is the Co-Founder and COO of 99point9, a standardized test prep company. He is also an entrepreneur, strategist, researcher and will be using the TEDxUTSC platform to speak about the importance of interaction in education through cohesive, rewarding interface for students. 
+      - name: Maya Cheaib
+        id: maya
+        position: CRIMINOLOGY & SOCIO-LEGAL<br/>STUDIES MASTERS STUDENT
+        image: assets/speakers/maya.jpeg
+        bio: >
+            Maya is one of our student speakers, and she will be using the TEDxUTSC platform to talk about the importance of cultural sensitivity - what it is like growing up as a visible minority (in Toronto), and how that has affected, and thus, changed her perception of life.
+      - name: Hartley Jafine
+        id: hartley
+        position: ARTS & SCIENCES PROFFESOR
+        image: assets/speakers/hartley.jpeg
+        bio: >
+            Hartley is a professor of the Arts & Science program at McMaster University. He also works freelance as an Applied Drama practitioner, holds the position of communication coach at UofT's postgraduate medical education program, and utilizes his skills to be an Interprofessional Arts-Based Learning Specialist at Baycrest. He will be using the TEDxUTSC platform to speak about combining the world of theater and medicine to better understand and integrate these different disciplines into a sustainable, welcoming environment for the people.
+      - name: Steve Russell
+        id: steve
+        position: PHOTOJOURNALIST
+        image: assets/speakers/steve.jpeg
+        bio: >
+            Steve is a highly recognized photojournalist for the Toronto Star, and has received the National Newspaper Award in the sports category in 2014. He will be speaking about differentiating between real and fake media, and how we should challenge ourselves to seek different ways of looking at the world around us.
+      - name: Arshiya Bhan
+        id: arshiya
+        position: DANCER & FOUNDER<br/>OF FITNESS BRAND
+        image: assets/speakers/arshiya.jpeg
+        bio: >
+            Arshiya is a Toronto based dancer, choreographer and the founder of her Fitness class called Belly AB Fitness. Her goal is to inspire people through the medium of dance and her fitness classes, and she will be speaking about what it means to take care of oneself, and how one's mind and body should be reflected through a spiritual medium.
+---
+
+
+<header class="home__header__about">
+    <div class="feature-row feature-row--right">
+        <div class="container">
+            <div class="feature-row__content" style="padding-bottom: 300px;">
+                <div class="feature-row__content-dec"></div>
+                <div class="feature-row__title">
+                    <label class="sub-section-label">OUR 11 SPEAKERS</label>
+                    <h2>What will resonate with you?</h2>
+                </div>
+                <p>
+                    Our goal is to bring out the best speakers and the best topics possible. With that goal in mind, we present you with a diverse range of speakers, who speak about a variety of topics.
+                </p>
+            </div>
+        </div>
+        <img class="feature-row--right__image" src="assets/speaker-header.jpeg"/>
+    </div>
+</header>
+
+<section class="team team--speakers">
+    <div class="container">
+        {% for section in page.team %}
+        <div class="row">
+            {% for member in section.members %}
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="team__member-item" style="margin-top: 40px; cursor: pointer;" data-toggle="modal" data-target="#{{member.id}}-speaker-modal">
+                    <img src="{{ member.image }}" class="team__picture"/>
+                    <div class="team__name-gradient">
+                        <label class="team__member-name">{{ member.position }}</label>
+                        <label class="team__member-position">{{ member.name }}</label>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <br/><br/>
+        {% endfor %}
+    </div>
+</section>
+
+{% for section in page.team %}
+    {% for member in section.members %}
+        <div class="modal fade speaker-modal" tabindex="-1" role="dialog" id="{{member.id}}-speaker-modal" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content" data-dismiss="modal">
+            <div class="row">
+                <div class="col-lg-5 col-md-4">
+                    <img src="{{member.image}}" class="speaker-image" />
+                </div>
+                <div class="col-lg-7 col-md-8">
+                    <div class="speaker-content">
+                        <label class="sub-section-label">{{member.position}}</label>
+                        <div class="speaker-title">{{member.name}}</div>
+                        <p>{{member.bio}}</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    {% endfor %}
+{% endfor %}
