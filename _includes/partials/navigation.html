@@ -20,10 +20,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="https://www.youtube.com/user/TEDxUTSC">Past Talks</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% if page.title == 'InterestForm' %} active {% endif %}">
                 <a class="nav-link" href="{{ site.baseurl }}/interestForm.html">Interest</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% if page.title == 'SpeakerForm' %} active {% endif %}">
                 <a class="nav-link" href="{{ site.baseurl }}/speakerForm.html">Speaker Suggestion</a>
             </li>
             <li class="nav-item">
