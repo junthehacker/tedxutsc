@@ -10,12 +10,51 @@ title: SpeakerForm
             <div class="feature-row__content" style="padding-bottom: 300px;">
                 <div class="feature-row__content-dec"></div>
                 <div class="feature-row__title">
-                    <label class="sub-section-label">OUR 11 SPEAKERS</label>
-                    <h2>What will resonate with you?</h2>
+                    <label class="sub-section-label">Suggest a speaker</label>
+                    <h2>Want to speak or know someone that might? Just fill out the form below.</h2>
                 </div>
-                <p>
-                    Our goal is to bring out the best speakers and the best topics possible. With that goal in mind, we present you with a diverse range of speakers, who speak about a variety of topics.
-                </p>
+                <form accept-charset="UTF-8" name="submit-to-google-sheet" id="submit-to-google-sheet"> 
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>First Name:
+                                    <input type="text" name="first name" placeholder="First Name" class="form-control" required/>
+                                </label>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Last Name: 
+                                    <input type="text" name="last name" placeholder="Last Name" class="form-control" required/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Email:</label><br/>
+                                <input type="email" name="email" placeholder="Your Email" size="30" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Why are you recommending this person?</label><br/>
+                                <textarea name="Comments" id="comment" rows="1" cols="50" spellcheck="true" required></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Additional Comments: </label><br/>
+                                <textarea name="Comments" id="comment" rows="1" cols="50" spellcheck="true"></textarea>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="hidden" name="utf8" value="✓">
+                                <button type="submit">Submit</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </form>
             </div>
         </div>
         <img class="feature-row--right__image" src="assets/speaker-header.jpeg"/>
