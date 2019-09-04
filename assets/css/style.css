@@ -303,6 +303,9 @@ h2 {
     text-align: center; }
     .home__header__title h1 {
       font-size: 30px; } }
+.red {
+  background: #EC3523; }
+
 .home-gallery {
   opacity: 0;
   font-family: "Montserrat", sans-serif;
