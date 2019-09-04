@@ -1,7 +1,7 @@
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzCNvndziqSX2A8qkFpUakEbk3VgGpjM7RyrFQiTQSEmMssUqJU/exec';
 const form = document.forms['submit-to-google-sheet'];
 
-var $inputs = $("input[name='phone number'], input[name='email'");
+var $inputs = $("input[name='phone number'], input[name='email']");
 $inputs.on('input', function() {
     $inputs.not(this).prop('required', !$(this).val().length);
 })
