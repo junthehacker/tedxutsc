@@ -1,4 +1,6 @@
 var currentTab = 0; 
+var scriptURL = "https://script.google.com/macros/s/AKfycbxq0GIXDVKGZc09Auk_RakCT25xXawb7Mg6IYm0S-pyHdOmhwU/exec";
+const form = document.forms['submit-to-google-sheet'];
 showTab(currentTab); 
 
 function showTab(n) {
@@ -31,8 +33,11 @@ function nextPrev(n) {
   currentTab = currentTab + n;
 
   if (currentTab >= x.length) {
-
+    fetch(scriptURL, {method: 'POST', body: new FormData(form)})
+      .then(Response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
     document.getElementById("regForm").submit();
+    
     return false;
   }
 
@@ -43,8 +48,6 @@ function validateForm() {
 
   var x, y, i, valid = true;
   x = document.getElementsByClassName("tab");
-  //y = x[currentTab].getElementsByTagName("input");
-  //y = x[currentTab].getElementsByClassName("application");
   y = x[currentTab].querySelectorAll("input, textarea");
 
   for (i = 0; i < y.length; i++) {
@@ -60,9 +63,8 @@ function validateForm() {
   if (valid) {
     document.getElementsByClassName("step")[currentTab].className += " finish";
   }
-
   if(currentTab == 3) {
-    return true;
+    valid = true;
   }
   return valid;
 }
@@ -76,3 +78,4 @@ function fixStepIndicator(n) {
 
   x[n].className += " active";
 }
+

@@ -7,9 +7,7 @@ title: AssociateApplication
   box-sizing: border-box;
 }
 
-
 #regForm {
-  
   margin: 100px auto;
   font-family: Raleway;
   padding: 40px;
@@ -94,37 +92,37 @@ button:hover {
             audience. 
         </p>
         
-        <form id="regForm" action="">
+        <form id="regForm" action="" name="submit-to-google-sheet">                    
             <h1>Application</h1>
             
-            <div class="tab"> Name:
-                <p><input placeholder="First Name" oninput="this.className = ''"></p>
-                <p><input placeholder="Last Name" oninput="this.className = ''"></p>
+            <div class="tab"> <h4>Name:</h4>
+                <p><input name="first name" placeholder="First Name" oninput="this.className = ''"></p>
+                <p><input name="last name" placeholder="Last Name" oninput="this.className = ''"></p>
             </div>
-            <div class="tab"> Contact:
-                <p><input placeholder="Email" type="email" oninput="this.className = ''"></p>
-                <p><input  placeholder="Phone Number" type="tel" oninput="this.className = ''"></p>
+            <div class="tab"> <h4>Contact:</h4>
+                <p><input name="email" placeholder="Email" type="email" oninput="this.className = ''"></p>
+                <p><input name="phone number" placeholder="Phone Number" type="tel" oninput="this.className = ''"></p>
             </div>
-            <div class="tab"> Academics:
-                <p><input placeholder="Program Study" type="text" oninput="this.className = ''"></p>
-                <p><input  placeholder="Year of Study (Fall 2019)" type="text" oninput="this.className = ''"></p>
+            <div class="tab"> <h4>Academics:</h4>
+                <p><input name="program study" placeholder="Program Study" type="text" oninput="this.className = ''"></p>
+                <p><input name="year of study" placeholder="Year of Study (Fall 2019)" type="text" oninput="this.className = ''"></p>
             </div>
-            <div class="tab"> Social Media: <br/> (Optional)
-                <p><input placeholder="Facebook" type="text" oninput="this.className = ''"></p>
-                <p><input placeholder="Twitter" type="text" oninput="this.className = ''"></p>
-                <p><input placeholder="Skype/Hangout" type="text" oninput="this.className = ''"></p>
+            <div class="tab"> <h4>Social Media: <br/> (Optional)</h4>
+                <p><input name="facebook" placeholder="Facebook" type="text" oninput="this.className = ''"></p>
+                <p><input name="twitter" placeholder="Twitter" type="text" oninput="this.className = ''"></p>
+                <p><input name="skype/hangouts" placeholder="Skype/Hangout" type="text" oninput="this.className = ''"></p>
             </div>
             <div class="tab">
-                Please list out any commitments (i.e. work terms, extra curricular, etc.) you may be involved in for the coming year (beginning September 2018) and include the duration of each commitment <br/>
+                <h4>Please list out any commitments (i.e. work terms, extra curricular, etc.) you may be involved in for the coming year (beginning September 2018) and include the duration of each commitment <br/></h4>
                 <p><textarea name="commitments" id="" cols="50" rows="5" oninput="this.className = ''"></textarea></p>
             </div>
             <div class="tab">
-                What makes you passionate about the TED movement? Why would you like to become a part of TEDxUTSC?
-                <p><textarea name="commitments" id="" cols="50" rows="5" oninput="this.className = ''"></textarea></p>
+                <h4>What makes you passionate about the TED movement? Why would you like to become a part of TEDxUTSC?</h4>
+                <p><textarea name="passion" id="" cols="50" rows="5" oninput="this.className = ''"></textarea></p>
             </div>
             <div class="tab">
-                What unique skill can you bring to the TEDxUTSC team? How does your experience demonstrate this?
-                <p><textarea  name="commitments" id="" cols="50" rows="5" oninput="this.className = ''"></textarea></p>
+                <h4>What unique skill can you bring to the TEDxUTSC team? How does your experience demonstrate this?</h4>
+                <p><textarea  name="skills" id="" cols="50" rows="5" oninput="this.className = ''"></textarea></p>
             </div>
             <div style="overflow: auto;">
                 <div style="float:right;">
