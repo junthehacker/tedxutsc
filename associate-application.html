@@ -11,7 +11,7 @@
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Montserrat:400,500,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="/assets/css/style.css?version=1c4540e_20190928_015237">
+    <link rel="stylesheet" href="/assets/css/style.css?version=1c4540e_20190929_162852">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AssociateApplication - TEDxUTSC</title>
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.png">
@@ -133,6 +133,18 @@ button:hover {
 .step.finish {
   background-color: #ff0000;
 }
+
+ul {
+  display: table;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#regForm {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
 </style>
 <section class="post">
 
@@ -146,10 +158,18 @@ button:hover {
             TEDx conference. We are looking for those who are highly organized, eager to learn and interact with TEDxUTSC’s 
             audience. 
         </p>
-        
-        <form id="regForm" action="" name="submit-to-google-sheet">                    
+        <h4>What we look for:</h4>
+        <ul>
+          <li>A University of Toronto student for the school year of 2019-2020 </li>
+          <li>Excellent time management skills, ability to multi-task, and attention to detail </li>
+          <li>Excellent interpersonal skills and ability to communicate ideas effectively </li>
+          <li>Ability to work independently as well as in a team </li>
+        </ul>
+        <br/>
+        <h5>By joining the TEDxUTSC Associates team, you are partaking in a long-lasting legacy—a mission to unite ideas worth spreading where tomorrow is created. </h5>       
+        <iframe width="0" height="0" name="dummyframe" id="dummyframe"></iframe>
+        <form id="regForm" name="submit-to-google-sheet" action="https://script.google.com/macros/s/AKfycbxq0GIXDVKGZc09Auk_RakCT25xXawb7Mg6IYm0S-pyHdOmhwU/exec" method="POST" target="dummyframe">                    
             <h1>Application</h1>
-            
             <div class="tab"> <h4>Name:</h4>
                 <p><input name="first name" placeholder="First Name" oninput="this.className = ''"></p>
                 <p><input name="last name" placeholder="Last Name" oninput="this.className = ''"></p>
@@ -179,13 +199,19 @@ button:hover {
                 <h4>What unique skill can you bring to the TEDxUTSC team? How does your experience demonstrate this?</h4>
                 <p><textarea  name="skills" id="" cols="50" rows="5" oninput="this.className = ''"></textarea></p>
             </div>
+            <div class="tab">
+              <h4>Resume</h4>
+              <div id="data"></div>
+              <p><input name="resume" type="file" id="resume" oninput="this.className=''"></p>
+            </div>
             <div style="overflow: auto;">
                 <div style="float:right;">
                     <button type="button" id="prevBtn" onClick="nextPrev(-1)">Previous</button>
                     <button type="button" id="nextBtn" onClick="nextPrev(1)">Next</button>
                 </div>
             </div>
-            <div style="text-align:center;margin-top:40px;">
+            <div style="text-align:center;margin-top:40px;" id="span">
+                <span class="step"></span>
                 <span class="step"></span>
                 <span class="step"></span>
                 <span class="step"></span>
@@ -194,7 +220,11 @@ button:hover {
                 <span class="step"></span>
                 <span class="step"></span>
             </div>
-        </form>        
+        </form>
+        <div id="success-message" class='alert collapse' >
+            <a class='close' data-hide='alert' onclick="hideMessage()">&times;</a>
+            <strong id="message"></strong>
+        </div>        
     </div>
 </section>
 
@@ -224,7 +254,7 @@ button:hover {
                         <li><a href="mailto:info@tedxutsc.com"><img src="assets/icons/email.png" alt="Email" /></a></li>
                     </ul>
                     <div class="footer__copyright">
-                        <small>production 1c4540e_20190928_015237</small>
+                        <small>production 1c4540e_20190929_162852</small>
                         &copy; TEDXUTSC 2018
                     </div>
                 </div>
@@ -276,7 +306,7 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
 
 `, 'color: red; font-weight: bold;');
 
-console.log("You are running in production, build 1c4540e_20190928_015237");
+console.log("You are running in production, build 1c4540e_20190929_162852");
 console.log("Want to help us out? https://github.com/junthehacker/tedxutsc");
     // Hide the loading screen after 2 seconds
 (function() {
@@ -305,6 +335,41 @@ console.log("Want to help us out? https://github.com/junthehacker/tedxutsc");
 var scriptURL = "https://script.google.com/macros/s/AKfycbxq0GIXDVKGZc09Auk_RakCT25xXawb7Mg6IYm0S-pyHdOmhwU/exec";
 const form = document.forms['submit-to-google-sheet'];
 showTab(currentTab); 
+
+$('#resume').on('change', function() {
+
+  var file = this.files[0];
+  var fr = new FileReader();
+  fr.fileName = file.name;
+  fr.onload = function(e) {
+    e.target.result;
+    html = '<input type="hidden" name="data" value="' + e.target.result.replace(/^.*,/, '') + '" >';
+    html += '<input type="hidden" name="mimetype" value="' + e.target.result.match(/^.*(?=;)/)[0] + '" >';
+    html += '<input type="hidden" name="filename" value="' + e.target.fileName + '" >';
+    $("#data").empty().append(html);
+  }
+  fr.readAsDataURL(file);
+});
+
+form.addEventListener("submit", () => {
+  span = document.getElementById("span");
+  nextBtn = document.getElementById("nextBtn");
+  prevBtn = document.getElementById("prevBtn");
+
+  span.style.display="none";
+  nextBtn.style.display="none";
+  prevBtn.style.display="none";
+  console.log("submit clicked")
+})
+
+function showMessage(e){
+
+  $('#progress').html(e);
+}
+
+function hideMessage() {
+  $('.' + $('.close').attr('data-hide')).hide();
+}
 
 function showTab(n) {
   
@@ -336,10 +401,33 @@ function nextPrev(n) {
   currentTab = currentTab + n;
 
   if (currentTab >= x.length) {
-    fetch(scriptURL, {method: 'POST', body: new FormData(form)})
-      .then(Response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-    document.getElementById("regForm").submit();
+      
+      var data = new FormData();
+      data.append('resume', document.getElementById('resume').files);
+
+      fetch(scriptURL, {method: 'POST', body: data })
+      .then(response => {
+        console.log('Success!', response)
+        span = document.getElementById("span");
+        nextBtn = document.getElementById("nextBtn");
+        prevBtn = document.getElementById("prevBtn");
+
+        span.style.display="none";
+        nextBtn.style.display="none";
+        prevBtn.style.display="none";
+
+        $("#success-message").attr("class", "alert alert-success alert-dismissible");
+        document.getElementById("message").innerText = "Thank you very much for your application! Please note that only successful candidates will be contacted";
+        $('.alert').show();
+      })
+      .catch(error => {
+        console.error('Error!', error.message)
+        $("#success-message").attr("class", "alert alert-danger alert-dismissible");
+        document.getElementById("message").innerText = "Error! Something went wrong";
+        $('.alert').show();
+      })
+
+      document.getElementById("regForm").submit();
     
     return false;
   }
