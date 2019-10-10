@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="/assets/css/style.css?version=e9de41f_20191010_022849">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team - TEDxUTSC</title>
+    <title>InterestForm - TEDxUTSC</title>
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.png">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 </head>
@@ -33,7 +33,7 @@
             <li class="nav-item ">
                 <a class="nav-link" href="/">Home</a>
             </li>
-            <li class="nav-item  active ">
+            <li class="nav-item ">
                 <a class="nav-link" href="/team.html">Team</a>
             </li>
             <li class="nav-item ">
@@ -45,7 +45,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="https://www.youtube.com/user/TEDxUTSC">Past Talks</a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item  active ">
                 <a class="nav-link" href="/interestForm.html">Interest</a>
             </li>
             <li class="nav-item">
@@ -57,398 +57,81 @@
     </div>
 </nav>
 
+<!-- GITHUB guide to pushing to google sheets: https://github.com/jamiewilson/form-to-google-sheets-->
+
 <header class="home__header__about">
     <div class="feature-row feature-row--right">
         <div class="container">
             <div class="feature-row__content">
                 <div class="feature-row__content-dec"></div>
                 <div class="feature-row__title">
-                    <label class="sub-section-label">OUR TEAM</label>
-                    <h2>We aspire to start a movement</h2>
+                    <label class="sub-section-label">Express Your Interest</label>
+                    <h2>Want to join our team? Just fill out the form below</h2>
                 </div>
-                <p>
-                    Since 2012,TEDxUTSC has independently organized a
-                    platform for our community's sharpest visionaries to
-                    inspire and captivate Toronto, GTA, and the global audience.
-                </p>
+                <form accept-charset="UTF-8" name="submit-to-google-sheet" id="submit-to-google-sheet"> 
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>First Name:
+                                    <input type="text" name="first name" placeholder="First Name" class="form-control" required/>
+                                </label>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Last Name: 
+                                    <input type="text" name="last name" placeholder="Last Name" class="form-control" required/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Email:</label><br/>
+                                <input type="email" name="email" placeholder="Your Email" size="30" required />
+                            </div>
+                        </div>
+                        <label>Interested Position:</label><br/>
+                        <select name="department/position" >
+                            <option value="Conference Development" >Conference Development</option>
+                            <option value="Marketing and Communication" >Marketing and Communication</option>
+                            <option value="Program Development" >Program Development</option>
+                            <option value="Unsure" > Not sure </option>
+                        </select>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Optional Comments:</label><br/>
+                                <textarea name="Comments" id="comment" rows="1" cols="50" spellcheck="true" ></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>How did you hear about TEDxUTSC</label><br/>
+                                <input type="radio" name="how did you know?" value="Event" required>Event<br>
+                                <input type="radio" name="how did you know?" value="Referral" required>Referral<br>
+                                <input type="radio" name="how did you know?" value="Social Media" required>Social Media<br>
+                                <input type="radio" name="how did you know?" value="Other" required>Other 
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="hidden" name="utf8" value="✓">
+                                <button type="submit">Submit</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </form>
+                
+            </div>
+            <br />
+            <div id="success-message" class='alert collapse' >
+                <a class='close' data-hide='alert' onclick="hideMessage()">&times;</a>
+                <strong id="message"></strong>
             </div>
         </div>
-        <div class="team__experience-box">
-            <div class="container">
-                <div class="row">
-                    <div class="col-4" style="opacity: 0; animation: fade-in 2s ease 2s 1 normal forwards;">
-                        <label class="team__experience">1</label>
-                        <h2 class="team__explanation">Stage</h2>
-                    </div>
-                    <div class="col-4" style="opacity: 0; animation: fade-in 2s ease 2.5s 1 normal forwards;">
-                        <label class="team__experience">7</label>
-                        <h2 class="team__explanation">Years of <br/>Storytelling</h2>
-                    </div>
-                    <div class="col-4" style="opacity: 0; animation: fade-in 2s ease 3s 1 normal forwards;">
-                        <label class="team__experience">27</label>
-                        <h2 class="team__explanation">Countries that live<br/>streamed our event</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <img class="feature-row--right__image" src="assets/team-header.jpeg"/>
     </div>
 </header>
-
-<section class="team">
-    <div class="container">
-        <label class="team__sub-section">MEET OUR 2019 TEAM</label>
-        
-        <h2 class="team__label">Leads</h2>
-        <div class="row">
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/sakina.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Sakina Gadriwala</label>
-                        <label class="team__member-position">Chair</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/fedriz.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Fredriz Cantilado</label>
-                        <label class="team__member-position">Conference Development</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/shagny.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Shagny Shanmugan</label>
-                        <label class="team__member-position">Marketing & Communications</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/piyal-2.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Piyal Sarker</label>
-                        <label class="team__member-position">Program Development</label>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-        <br/><br/>
-        
-        <h2 class="team__label">Directors</h2>
-        <div class="row">
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/rimshah.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Rimshah Rahman</label>
-                        <label class="team__member-position">Events</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/jun.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Jun Zheng</label>
-                        <label class="team__member-position">Information Technology</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/maisha.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Maisha Mustanzir</label>
-                        <label class="team__member-position">Speaker Relations - Internal</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/aaheli.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Aaheli Mukherjee</label>
-                        <label class="team__member-position">Productions - Technical</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/winky.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Winky Cai</label>
-                        <label class="team__member-position">Productions - Talents</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/vanshika.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Vanshika Agarwal</label>
-                        <label class="team__member-position">Speaker Relations - Internal</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/joy.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Joy Panjaitan</label>
-                        <label class="team__member-position">Design</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/tariq.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Tariq Al Hashim</label>
-                        <label class="team__member-position">Partnerships</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/michelle.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Michelle Godwin</label>
-                        <label class="team__member-position">Partnerships</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/nazrin.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Nazrin Aliyeva</label>
-                        <label class="team__member-position">Director of Finance</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/kartavi.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Kartavi Patel</label>
-                        <label class="team__member-position">Speaker Relations  - Alumni & Students</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/william.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">William Song</label>
-                        <label class="team__member-position">Communications</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/daniel.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Daniel Gomes</label>
-                        <label class="team__member-position">Communications</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/rhythm.jpg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Rhythm Sachdeva</label>
-                        <label class="team__member-position">Speaker Relations - External</label>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-        <br/><br/>
-        
-        <h2 class="team__label">Associates</h2>
-        <div class="row">
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/shalizeh.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Shalizeh Minaee</label>
-                        <label class="team__member-position">Program Development</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/christina.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Christina Wang</label>
-                        <label class="team__member-position">Design</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/saakshat.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Sakshaat Choyikandi</label>
-                        <label class="team__member-position">Events</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/khadija.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Khadija Rasid</label>
-                        <label class="team__member-position">Program Development</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/sharjeel.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Sharjeel Haider</label>
-                        <label class="team__member-position">Information Technology</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/tahsin.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Tahsin Sultana</label>
-                        <label class="team__member-position">Finance</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/jaclyn.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Jaclyn Yan</label>
-                        <label class="team__member-position">Partnerships</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/saira.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Saira Shafiq</label>
-                        <label class="team__member-position">Program Development</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/chiara.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Chiara D’Cruz</label>
-                        <label class="team__member-position">Productions - Technical</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/abhi.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Abhi Amin</label>
-                        <label class="team__member-position">Program Development</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/deandra.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Deandra Sookram</label>
-                        <label class="team__member-position">Events</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/kirthana.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Kirthana Vijit</label>
-                        <label class="team__member-position">Program Development</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/eesha.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Eesha Chaudry</label>
-                        <label class="team__member-position">Program Development</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/vaamitha.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Vaamitha Varathalingam</label>
-                        <label class="team__member-position">Productions - Talent</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item">
-                    <img src="assets/team/sarah.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Sarah Quershi</label>
-                        <label class="team__member-position">Productions - Technical</label>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-        <br/><br/>
-        
-    </div>
-</section>
 
 
 <section class="buy-tickets">
@@ -549,6 +232,35 @@ console.log("Want to help us out? https://github.com/junthehacker/tedxutsc");
 
     
 
+    
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw-iLISQsCKhF6pzalZuNLrZ3p9Ybc8NrWheucLbENOcL9IHRoX/exec';
+const form = document.forms['submit-to-google-sheet'];
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, {method: 'POST', mode: 'no-cors', body: new FormData(form)})
+        .then(res => {
+            if(res.status < 400){
+                return;
+            } else {
+                throw new Error('Fail');
+            }
+        })
+        .then(() => {
+            $("#success-message").attr("class", "alert alert-success alert-dismissible");
+            document.getElementById("message").innerText = "Success!";
+            document.getElementById("submit-to-google-sheet").reset();
+            $('.alert').show();
+        }).catch(() => {
+            $("#success-message").attr("class", "alert alert-danger alert-dismissible");
+            document.getElementById("message").innerText = "Error!";
+            $('.alert').show();
+        });
+}); 
+
+function hideMessage() {
+    $('.' + $('.close').attr('data-hide')).hide();
+}
     
     
     
