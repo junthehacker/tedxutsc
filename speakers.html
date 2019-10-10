@@ -11,7 +11,7 @@
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Montserrat:400,500,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="/assets/css/style.css?version=1c4540e_20190929_162852">
+    <link rel="stylesheet" href="/assets/css/style.css?version=f05229f_20191010_034705">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speakers - TEDxUTSC</title>
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.png">
@@ -36,22 +36,18 @@
             <li class="nav-item ">
                 <a class="nav-link" href="/team.html">Team</a>
             </li>
-            <li class="nav-item  active ">
-                <a class="nav-link" href="/speakers.html">Speakers</a>
-            </li>
+            
             <li class="nav-item ">
                 <a class="nav-link" href="/pastSpeakers.html">Past Speakers</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="https://www.youtube.com/user/TEDxUTSC">Past Talks</a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item "> 
                 <a class="nav-link" href="/interestForm.html">Interest</a>
             </li>
             <li class="nav-item">
-                <a class="btn btn-primary" href="/associate-application.html">
-                    2020 Team Applications
-                </a>
+                <a class="btn btn-primary btn-lg" href="/speakers.html"><strong>2020 Speakers Applications</strong></a>
             </li>
         </ul>
     </div>
@@ -64,13 +60,25 @@
                 <div class="feature-row__content-dec"></div>
                 <div class="feature-row__title">
                     <label class="sub-section-label">OUR 11 SPEAKERS</label>
-                    <h2>What will resonate with you?</h2>
+                    <h2>Nominate a speaker</h2>
                 </div>
                 <p>
                     Our goal is to bring out the best speakers and the best topics possible. With that goal in mind, we present you with a diverse range of speakers, who speak about a variety of topics.
                 </p>
-                <h2>Nominate a speaker</h2>
+                <h2>Who are you nominating today?</h2>
                 <form accept-charset="UTF-8" name="submit-to-google-sheet" id="submit-to-google-sheet"> 
+                    <div class="container">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <input type="radio" name="Speaker is:" value="Myself" required> &nbsp Myself
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <input type="radio" name="Speaker is:" value="Someone else" required> &nbsp Someone else
+                            </div>
+                        </div>
+                    </div>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6">
@@ -90,7 +98,7 @@
                                 <input type="email" name="email" placeholder="Email" /> or <input type="tel" name="phone number" placeholder="Phone Number" title="Please enter only numbers" pattern="[0-9]+">
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row"> 
                             <div class="col-md-12">
                                 <label>Why are you recommending this person?</label><br/>
                                 <textarea name="reason" id="reason" rows="1" cols="50" spellcheck="true" required></textarea>
@@ -501,7 +509,7 @@
                         <li><a href="mailto:info@tedxutsc.com"><img src="assets/icons/email.png" alt="Email" /></a></li>
                     </ul>
                     <div class="footer__copyright">
-                        <small>production 1c4540e_20190929_162852</small>
+                        <small>production f05229f_20191010_034705</small>
                         &copy; TEDXUTSC 2018
                     </div>
                 </div>
@@ -509,7 +517,6 @@
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="/team.html">Team</a></li>
-                        <li><a href="/speakers.html">Speakers</a></li>
                         <li><a href="/speakers.html">Past Speakers</a></li>
                         <li><a href="https://www.youtube.com/user/TEDxUTSC">Past Talks</a></li>
                         <li><a href="/interestForm.html">Interest</a></li>
@@ -553,7 +560,7 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
 
 `, 'color: red; font-weight: bold;');
 
-console.log("You are running in production, build 1c4540e_20190929_162852");
+console.log("You are running in production, build f05229f_20191010_034705");
 console.log("Want to help us out? https://github.com/junthehacker/tedxutsc");
     // Hide the loading screen after 2 seconds
 (function() {

@@ -1,3 +1,4 @@
+//https://gist.github.com/tanaikech/2f16f467c94612dc83920a3158614d95
 var currentTab = 0; 
 var scriptURL = "https://script.google.com/macros/s/AKfycbxq0GIXDVKGZc09Auk_RakCT25xXawb7Mg6IYm0S-pyHdOmhwU/exec";
 const form = document.forms['submit-to-google-sheet'];
