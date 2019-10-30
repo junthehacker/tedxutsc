@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="/assets/css/style.css?version=9edea01_20191030_035708">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speakers - TEDxUTSC </title>
+    <title>HostPerformer - TEDxUTSC </title>
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.png">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 </head>
@@ -49,34 +49,44 @@
     </div>
 </nav>
 
+<style>
+    input[type="text"]:disabled {
+        background: #4d4d4d;
+    }
+
+    #name, #contact, #host, #performer{
+        margin-top:1em;
+    }
+</style>
+
 <header class="home__header__about">
     <div class="feature-row feature-row--right">
         <div class="container">
             <div class="feature-row__content" style="padding-bottom: 300px;">
                 <div class="feature-row__content-dec"></div>
                 <div class="feature-row__title">
-                    <label class="sub-section-label">OUR 11 SPEAKERS</label>
-                    <h2>Nominate a speaker</h2>
+                    <!--<label class="sub-section-label">Title here</label>-->
+                    <h2>Apply to be a host or a performer</h2>
                 </div>
                 <p>
-                    Our goal is to bring out the best speakers and the best topics possible. With that goal in mind, we present you with a diverse range of speakers, who speak about a variety of topics.
+                    Experience something truly unique by applying to work with us as a host or a performer.
                 </p>
-                <h2>Who are you nominating today?</h2>
+                <h2>Are you a host or a performer?</h2>
                 <form accept-charset="UTF-8" name="submit-to-google-sheet" id="submit-to-google-sheet"> 
                     <div class="container">
                         <div class="col-md-6">
-                            <div class="row">
-                                <input type="radio" name="Speaker is:" value="Myself" required> &nbsp Myself
+                            <div class="row" for="host">
+                                <input type="radio" name="host/performer" value="Host" required> &nbsp Host
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="row">
-                                <input type="radio" name="Speaker is:" value="Someone else" required> &nbsp Someone else
+                            <div class="row" for="performer">
+                                <input type="radio" name="host/performer" value="Performer" required> &nbsp Performer
                             </div>
                         </div>
                     </div>
                     <div class="container">
-                        <div class="row">
+                        <div class="row" id="name">
                             <div class="col-md-6">
                                 <label>First Name:
                                     <input type="text" name="first name" placeholder="First Name" class="form-control" required/>
@@ -88,22 +98,24 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row" id="contact">
                             <div class="col-md-12">
                                 <label>Contact info:</label><br/>
-                                <input type="email" name="email" placeholder="Email" /> or <input type="tel" name="phone number" placeholder="Phone Number" title="Please enter only numbers" pattern="[0-9]+">
+                                <input type="email" name="email" placeholder="Email" /> or <input type="tel" name="phone number" placeholder="Phone Number" title="Please enter only numbers" pattern="[0-9]+" >
                             </div>
                         </div>
-                        <div class="row"> 
+                        <div class="row" id="performer">
                             <div class="col-md-12">
-                                <label>Why are you recommending this person?</label><br/>
-                                <textarea name="reason" id="reason" rows="1" cols="50" spellcheck="true" required></textarea>
+                                <label>Link to performance: </label><br/>
+                                <textarea name="performance" id="performance" class="performer" rows="1" cols="50" disabled required></textarea>
+                                <!--<textarea name="comments" id="comment" rows="1" cols="50" spellcheck="true"></textarea>-->
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row" id="host"> 
                             <div class="col-md-12">
-                                <label>Optional Comments: </label><br/>
-                                <textarea name="comments" id="comment" rows="1" cols="50" spellcheck="true"></textarea>
+                                <label>Host Resume: </label><br/>
+                                <div id="data"></div>
+                                <input name="resume" id="resume" type="file" class="host" oninput="this.className=''" disabled required >
                             </div>
                         </div>
                         <br/>
@@ -125,360 +137,6 @@
         <img class="feature-row--right__image" src="assets/speaker-header.jpeg"/>
     </div>
 </header>
-
-<section class="team team--speakers">
-    <div class="container">
-        <h1>Our past speakers</h1>
-        
-        <div class="row">
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item" style="margin-top: 40px; cursor: pointer;" data-toggle="modal" data-target="#axel-speaker-modal">
-                    <img src="assets/speakers/axel.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">CEO, Designer</label>
-                        <label class="team__member-position">Axel Villamil</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item" style="margin-top: 40px; cursor: pointer;" data-toggle="modal" data-target="#shehna-speaker-modal">
-                    <img src="assets/speakers/shehna-2.png" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">ACADEMIC & LEARNING STRATEGIST</label>
-                        <label class="team__member-position">Shehna Javeed</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item" style="margin-top: 40px; cursor: pointer;" data-toggle="modal" data-target="#marlene-speaker-modal">
-                    <img src="assets/speakers/marlene.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">English Professor</label>
-                        <label class="team__member-position">Marlene Goldman</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item" style="margin-top: 40px; cursor: pointer;" data-toggle="modal" data-target="#zayn-speaker-modal">
-                    <img src="assets/speakers/zayn.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">MOLECULAR BIOLOGIST</label>
-                        <label class="team__member-position">Zayn Khamis</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item" style="margin-top: 40px; cursor: pointer;" data-toggle="modal" data-target="#jonathan-speaker-modal">
-                    <img src="assets/speakers/jonathan.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">JOURNALIST & AUTHOR</label>
-                        <label class="team__member-position">Jonathan Kay</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item" style="margin-top: 40px; cursor: pointer;" data-toggle="modal" data-target="#tahmid-speaker-modal">
-                    <img src="assets/speakers/tahmid.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">Global Health Student</label>
-                        <label class="team__member-position">Tahmid Hasib Khan</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item" style="margin-top: 40px; cursor: pointer;" data-toggle="modal" data-target="#sohaib-speaker-modal">
-                    <img src="assets/speakers/sohaib.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">COO & RESEARCHER</label>
-                        <label class="team__member-position">Sohaib Ahmed</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item" style="margin-top: 40px; cursor: pointer;" data-toggle="modal" data-target="#maya-speaker-modal">
-                    <img src="assets/speakers/maya.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">CRIMINOLOGY & SOCIO-LEGAL<br/>STUDIES MASTERS STUDENT</label>
-                        <label class="team__member-position">Maya Cheaib</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item" style="margin-top: 40px; cursor: pointer;" data-toggle="modal" data-target="#hartley-speaker-modal">
-                    <img src="assets/speakers/hartley.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">ARTS & SCIENCES PROFFESOR</label>
-                        <label class="team__member-position">Hartley Jafine</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item" style="margin-top: 40px; cursor: pointer;" data-toggle="modal" data-target="#steve-speaker-modal">
-                    <img src="assets/speakers/steve.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">PHOTOJOURNALIST</label>
-                        <label class="team__member-position">Steve Russell</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="team__member-item" style="margin-top: 40px; cursor: pointer;" data-toggle="modal" data-target="#arshiya-speaker-modal">
-                    <img src="assets/speakers/arshiya.jpeg" class="team__picture"/>
-                    <div class="team__name-gradient">
-                        <label class="team__member-name">DANCER & FOUNDER<br/>OF FITNESS BRAND</label>
-                        <label class="team__member-position">Arshiya Bhan</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <a href="/pastSpeakers.html" class="team__member-item nav-link" style="margin-top: 40px; cursor: pointer; height: 361px; background-color: #EC3523" >
-                    <div class="team__name-gradient">
-                        <div class="team_member-position" style="color: white; text-align: center;">More Speakers</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <br/><br/>
-        
-        
-    </div>
-</section>
-
-
-    
-        <div class="modal fade speaker-modal" tabindex="-1" role="dialog" id="axel-speaker-modal" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content" data-dismiss="modal">
-            <div class="row">
-                <div class="col-lg-5 col-md-4">
-                    <img src="assets/speakers/axel.jpeg" class="speaker-image" />
-                </div>
-                <div class="col-lg-7 col-md-8">
-                    <div class="speaker-content">
-                        <label class="sub-section-label">CEO, Designer</label>
-                        <div class="speaker-title">Axel Villamil</div>
-                        <p>Axel is a director, developer, and an artist. Not only that, he is also the CEO and founder of 3 companies, and he's still in his twenties! Combining his passion for beautiful designs, and knowledge in technical practices, Axel is motivated to create breathtaking and immersive products. Axel will be talking about the difference between safe and passion; about normalizing the un-norm – "it is only crazy until you do it, and it is only innovation until that crazy has happened".
-</p>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    
-        <div class="modal fade speaker-modal" tabindex="-1" role="dialog" id="shehna-speaker-modal" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content" data-dismiss="modal">
-            <div class="row">
-                <div class="col-lg-5 col-md-4">
-                    <img src="assets/speakers/shehna-2.png" class="speaker-image" />
-                </div>
-                <div class="col-lg-7 col-md-8">
-                    <div class="speaker-content">
-                        <label class="sub-section-label">ACADEMIC & LEARNING STRATEGIST</label>
-                        <div class="speaker-title">Shehna Javeed</div>
-                        <p>You have definitely seen her on campus here at UTSC because she is a staff member at the Department of Academic Advising and Careers as an academic & learning strategist. She will be talking about the idea of the self-construct by intertwining the stories of her three female students with her own story and experiences.
-</p>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    
-        <div class="modal fade speaker-modal" tabindex="-1" role="dialog" id="marlene-speaker-modal" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content" data-dismiss="modal">
-            <div class="row">
-                <div class="col-lg-5 col-md-4">
-                    <img src="assets/speakers/marlene.jpeg" class="speaker-image" />
-                </div>
-                <div class="col-lg-7 col-md-8">
-                    <div class="speaker-content">
-                        <label class="sub-section-label">English Professor</label>
-                        <div class="speaker-title">Marlene Goldman</div>
-                        <p>Marlene is one of our English professors here at UTSC, and she is also an accomplished writer and filmmaker. She will be speaking about three elements intertwined together.<br/>a) Munro studies<br/>b) theories of the short story and<br/>c) the genre of the memoir.
-</p>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    
-        <div class="modal fade speaker-modal" tabindex="-1" role="dialog" id="zayn-speaker-modal" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content" data-dismiss="modal">
-            <div class="row">
-                <div class="col-lg-5 col-md-4">
-                    <img src="assets/speakers/zayn.jpeg" class="speaker-image" />
-                </div>
-                <div class="col-lg-7 col-md-8">
-                    <div class="speaker-content">
-                        <label class="sub-section-label">MOLECULAR BIOLOGIST</label>
-                        <div class="speaker-title">Zayn Khamis</div>
-                        <p>Zayn is a highly accomplished molecular biologist, who would be speaking about the navigation of our medical system, and asking how medicine, technology and history has interjected in a personal standpoint.
-</p>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    
-        <div class="modal fade speaker-modal" tabindex="-1" role="dialog" id="jonathan-speaker-modal" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content" data-dismiss="modal">
-            <div class="row">
-                <div class="col-lg-5 col-md-4">
-                    <img src="assets/speakers/jonathan.jpeg" class="speaker-image" />
-                </div>
-                <div class="col-lg-7 col-md-8">
-                    <div class="speaker-content">
-                        <label class="sub-section-label">JOURNALIST & AUTHOR</label>
-                        <div class="speaker-title">Jonathan Kay</div>
-                        <p>Jonathan is a Canadian journalist, the current Canadian editor of the online magazine, Quilette; he is also the former editor-in-chief of The Walrus, an accomplished writer, and a decorated alumni at the National Post. He will use the TEDxUTSC platform to discuss the balance of respecting one’s freedom of speech as well as one’s right to not be subject to hate speech.
-</p>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    
-        <div class="modal fade speaker-modal" tabindex="-1" role="dialog" id="tahmid-speaker-modal" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content" data-dismiss="modal">
-            <div class="row">
-                <div class="col-lg-5 col-md-4">
-                    <img src="assets/speakers/tahmid.jpeg" class="speaker-image" />
-                </div>
-                <div class="col-lg-7 col-md-8">
-                    <div class="speaker-content">
-                        <label class="sub-section-label">Global Health Student</label>
-                        <div class="speaker-title">Tahmid Hasib Khan</div>
-                        <p>Tahmid is our student speaker, and definitely has an eye-opening talk, and leaves us with this gem: "We don’t know our capability unless we are faced with a situation that changes our entire lives forever while the whole world watches. You begin to appreciate life a lot more."
-</p>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    
-        <div class="modal fade speaker-modal" tabindex="-1" role="dialog" id="sohaib-speaker-modal" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content" data-dismiss="modal">
-            <div class="row">
-                <div class="col-lg-5 col-md-4">
-                    <img src="assets/speakers/sohaib.jpeg" class="speaker-image" />
-                </div>
-                <div class="col-lg-7 col-md-8">
-                    <div class="speaker-content">
-                        <label class="sub-section-label">COO & RESEARCHER</label>
-                        <div class="speaker-title">Sohaib Ahmed</div>
-                        <p>Sohaib is the Co-Founder and COO of 99point9, a standardized test prep company. He is also an entrepreneur, strategist, researcher and will be using the TEDxUTSC platform to speak about the importance of interaction in education through cohesive, rewarding interface for students. 
-</p>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    
-        <div class="modal fade speaker-modal" tabindex="-1" role="dialog" id="maya-speaker-modal" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content" data-dismiss="modal">
-            <div class="row">
-                <div class="col-lg-5 col-md-4">
-                    <img src="assets/speakers/maya.jpeg" class="speaker-image" />
-                </div>
-                <div class="col-lg-7 col-md-8">
-                    <div class="speaker-content">
-                        <label class="sub-section-label">CRIMINOLOGY & SOCIO-LEGAL<br/>STUDIES MASTERS STUDENT</label>
-                        <div class="speaker-title">Maya Cheaib</div>
-                        <p>Maya is one of our student speakers, and she will be using the TEDxUTSC platform to talk about the importance of cultural sensitivity - what it is like growing up as a visible minority (in Toronto), and how that has affected, and thus, changed her perception of life.
-</p>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    
-        <div class="modal fade speaker-modal" tabindex="-1" role="dialog" id="hartley-speaker-modal" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content" data-dismiss="modal">
-            <div class="row">
-                <div class="col-lg-5 col-md-4">
-                    <img src="assets/speakers/hartley.jpeg" class="speaker-image" />
-                </div>
-                <div class="col-lg-7 col-md-8">
-                    <div class="speaker-content">
-                        <label class="sub-section-label">ARTS & SCIENCES PROFFESOR</label>
-                        <div class="speaker-title">Hartley Jafine</div>
-                        <p>Hartley is a professor of the Arts & Science program at McMaster University. He also works freelance as an Applied Drama practitioner, holds the position of communication coach at UofT's postgraduate medical education program, and utilizes his skills to be an Interprofessional Arts-Based Learning Specialist at Baycrest. He will be using the TEDxUTSC platform to speak about combining the world of theater and medicine to better understand and integrate these different disciplines into a sustainable, welcoming environment for the people.
-</p>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    
-        <div class="modal fade speaker-modal" tabindex="-1" role="dialog" id="steve-speaker-modal" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content" data-dismiss="modal">
-            <div class="row">
-                <div class="col-lg-5 col-md-4">
-                    <img src="assets/speakers/steve.jpeg" class="speaker-image" />
-                </div>
-                <div class="col-lg-7 col-md-8">
-                    <div class="speaker-content">
-                        <label class="sub-section-label">PHOTOJOURNALIST</label>
-                        <div class="speaker-title">Steve Russell</div>
-                        <p>Steve is a highly recognized photojournalist for the Toronto Star, and has received the National Newspaper Award in the sports category in 2014. He will be speaking about differentiating between real and fake media, and how we should challenge ourselves to seek different ways of looking at the world around us.
-</p>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    
-        <div class="modal fade speaker-modal" tabindex="-1" role="dialog" id="arshiya-speaker-modal" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content" data-dismiss="modal">
-            <div class="row">
-                <div class="col-lg-5 col-md-4">
-                    <img src="assets/speakers/arshiya.jpeg" class="speaker-image" />
-                </div>
-                <div class="col-lg-7 col-md-8">
-                    <div class="speaker-content">
-                        <label class="sub-section-label">DANCER & FOUNDER<br/>OF FITNESS BRAND</label>
-                        <div class="speaker-title">Arshiya Bhan</div>
-                        <p>Arshiya is a Toronto based dancer, choreographer and the founder of her Fitness class called Belly AB Fitness. Her goal is to inspire people through the medium of dance and her fitness classes, and she will be speaking about what it means to take care of oneself, and how one's mind and body should be reflected through a spiritual medium.
-</p>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    
-
 
 
 <section class="buy-tickets">
@@ -580,7 +238,10 @@ console.log("Want to help us out? https://github.com/junthehacker/tedxutsc");
 
     
     
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzCNvndziqSX2A8qkFpUakEbk3VgGpjM7RyrFQiTQSEmMssUqJU/exec';
+    
+
+    
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw3938jM6S4ZkYqMZmkEO7Y6BKPR57ON6YEuWIgX9QgDFWCtprt/exec';
 const form = document.forms['submit-to-google-sheet'];
 
 var $inputs = $("input[name='phone number'], input[name='email']");
@@ -588,9 +249,40 @@ $inputs.on('input', function() {
     $inputs.not(this).prop('required', !$(this).val().length);
 })
 
+var $inputRadio = $('input[type="radio"][name="host/performer"]');
+$inputRadio.click(function() {
+    var related_class = $(this).val();
+    $('.' + related_class).prop('disabled', false);  
+
+    $inputRadio.not(':checked').each(function() {
+        var other_class = $(this).val();
+        $('.' + other_class).prop('disabled', true);
+    })
+});
+
+$('#resume').on('change', function() {
+
+    var file = this.files[0];
+    var fr = new FileReader();
+    fr.fileName = file.name;
+    fr.onload = function(e) {
+      e.target.result;
+      html = '<input type="hidden" name="data" value="' + e.target.result.replace(/^.*,/, '') + '" >';
+      html += '<input type="hidden" name="mimetype" value="' + e.target.result.match(/^.*(?=;)/)[0] + '" >';
+      html += '<input type="hidden" name="filename" value="' + e.target.fileName + '" >';
+      $("#data").empty().append(html);
+    }
+    fr.readAsDataURL(file);
+  });
+
 form.addEventListener('submit', e => {
+    var data = new FormData(form);
+    if(document.getElementById("resume").files.length != 0){
+        data.append('resume', document.getElementById('resume').files);
+    }
+
     e.preventDefault();
-    fetch(scriptURL, {method: 'POST', mode: 'no-cors', body: new FormData(form)})
+    fetch(scriptURL, {method: 'POST', mode: 'no-cors', body: data})
         .then(res => {
             if(res.status < 400){
                 return;
@@ -600,7 +292,11 @@ form.addEventListener('submit', e => {
         })
         .then(() => {
             $("#success-message").attr("class", "alert alert-success alert-dismissible");
-            document.getElementById("message").innerText = "Thank you for your suggestion! The team will review them all shortly!";
+            document.getElementById("message").innerText = "Application submitted successfully";
+            $('#data').empty();
+            document.getElementById("resume").value = "";
+            $('#resume').prop("disabled", true);
+            $('#performance').prop("disabled", true);
             document.getElementById("submit-to-google-sheet").reset();
             $('.alert').show();
         }).catch(() => {
@@ -613,9 +309,6 @@ form.addEventListener('submit', e => {
 function hideMessage() {
     $('.' + $('.close').attr('data-hide')).hide();
 }
-    
-    
-
     
 
 </script>
