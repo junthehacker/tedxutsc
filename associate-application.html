@@ -11,9 +11,9 @@
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Montserrat:400,500,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="/assets/css/style.css?version=378d3fc_20191113_161412">
+    <link rel="stylesheet" href="/assets/css/style.css?version=ef55fb9_20191205_052702">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AssociateApplication - TEDxUTSC </title>
+    <title>Associate - TEDxUTSC </title>
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.png">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 </head>
@@ -34,18 +34,31 @@
                 <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item ">
+                <a class="nav-link" href="/about.html">About</a>
+            </li>
+            <li class="nav-item ">
                 <a class="nav-link" href="/team.html">Team</a>
             </li>
-            
             <li class="nav-item ">
-                <a class="nav-link" href="/pastSpeakers.html">Past Speakers</a>
+                    <a class="nav-link" href="/speakers.html">Speakers</a>
+                </li>
+            <li class="nav-item  ">
+                <a class="nav-link" href="/applications.html">Applications</a>
+            </li>
+            <li class="nav-item  ">
+                <a class="nav-link" href="/sponsors.html">Sponsors</a>
+            </li>
+            <li class="nav-item  ">
+                <a class="nav-link" href="/contact.html">Contact Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="https://www.youtube.com/user/TEDxUTSC">Past Talks</a>
+                <a href="https://tedxutsc2020.peatix.com/">
+                    <button class="btn btn-primary">
+                        <i aria-hidden="true"></i>
+                        Ticket Sales
+                    </button>
+                </a>
             </li>
-            <!--<li class="nav-item">
-                <a class="btn btn-primary btn-lg" href="/host-performer-application.html"><strong>Host/Performer Applications</strong></a>
-            </li>-->
     </div>
 </nav>
 
@@ -224,19 +237,21 @@ ul {
 
 <section class="buy-tickets">
     <div class="container">
-        <label class="sub-section-label">JOIN THE MOVEMENT</label>
-        <h2>Ready to be inspired?</h2>
-        <button class="btn btn-primary" disabled>
-            <i class="fa fa-play" aria-hidden="true"></i>
-                    Watch Live
-        </button>
+        <label class="sub-section-label" style="border-bottom: 5px solid red;" >JOIN THE MOVEMENT</label>
+        <h2>Ready to be inspired?</h2> 
+        <a href="https://www.youtube.com/user/TEDxUTSC">
+            <button class="btn btn-primary">
+                <i class="fa fa-play" aria-hidden="true"></i>
+                Past Talks
+            </button>
+        </a>
     </div>
 </section>
 
 <footer class="footer">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
+        <div class="row" style="justify-content: center;">
+            <div class="col-lg-8">
                 <div class="footer__contact">
                     <ul>
                         <li><a href="https://www.facebook.com/TEDxUTSC/"><img src="assets/icons/facebook.png" alt="Facebook" /></a></li>
@@ -245,20 +260,22 @@ ul {
                         <li><a href="https://www.youtube.com/user/TEDxUTSC"><img src="assets/icons/youtube.png" alt="YouTube" /></a></li>
                         <li><a href="mailto:info@tedxutsc.com"><img src="assets/icons/email.png" alt="Email" /></a></li>
                     </ul>
-                    <div class="footer__copyright">
-                        <small>production 378d3fc_20191113_161412</small>
-                        &copy; TEDXUTSC 2018
-                    </div>
                 </div>
                 <nav class="footer__nav">
                     <ul>
                         <li><a href="/">Home</a></li>
+                        <li><a href="/about.html">About</a></li>
                         <li><a href="/team.html">Team</a></li>
                         <li><a href="/speakers.html">Past Speakers</a></li>
-                        <li><a href="https://www.youtube.com/user/TEDxUTSC">Past Talks</a></li>
-                        <li><a href="/interestForm.html">Interest</a></li>
+                        <li><a href="/host-perforner-application.html">Applications</a></li>
+                        <li><a href="/sponsors.html">Sponsors</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
                     </ul>
                 </nav>
+                <div class="footer__copyright">
+                    <small>production ef55fb9_20191205_052702</small>
+                    &copy; TEDXUTSC 2018
+                </div>
             </div>
         </div>
     </div>
@@ -297,7 +314,7 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
 
 `, 'color: red; font-weight: bold;');
 
-console.log("You are running in production, build 378d3fc_20191113_161412");
+console.log("You are running in production, build ef55fb9_20191205_052702");
 console.log("Want to help us out? https://github.com/junthehacker/tedxutsc");
     // Hide the loading screen after 2 seconds
 (function() {
@@ -321,148 +338,6 @@ console.log("Want to help us out? https://github.com/junthehacker/tedxutsc");
 
     
     
-    
-        //https://gist.github.com/tanaikech/2f16f467c94612dc83920a3158614d95
-var currentTab = 0; 
-var scriptURL = "https://script.google.com/macros/s/AKfycbxq0GIXDVKGZc09Auk_RakCT25xXawb7Mg6IYm0S-pyHdOmhwU/exec";
-const form = document.forms['submit-to-google-sheet'];
-showTab(currentTab); 
-
-$('#resume').on('change', function() {
-
-  var file = this.files[0];
-  var fr = new FileReader();
-  fr.fileName = file.name;
-  fr.onload = function(e) {
-    e.target.result;
-    html = '<input type="hidden" name="data" value="' + e.target.result.replace(/^.*,/, '') + '" >';
-    html += '<input type="hidden" name="mimetype" value="' + e.target.result.match(/^.*(?=;)/)[0] + '" >';
-    html += '<input type="hidden" name="filename" value="' + e.target.fileName + '" >';
-    $("#data").empty().append(html);
-  }
-  fr.readAsDataURL(file);
-});
-
-form.addEventListener("submit", () => {
-  span = document.getElementById("span");
-  nextBtn = document.getElementById("nextBtn");
-  prevBtn = document.getElementById("prevBtn");
-
-  span.style.display="none";
-  nextBtn.style.display="none";
-  prevBtn.style.display="none";
-  console.log("submit clicked")
-})
-
-function showMessage(e){
-
-  $('#progress').html(e);
-}
-
-function hideMessage() {
-  $('.' + $('.close').attr('data-hide')).hide();
-}
-
-function showTab(n) {
-  
-  var x = document.getElementsByClassName("tab");
-  x[n].style.display = "block";
-  
-  if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
-  } else {
-    document.getElementById("prevBtn").style.display = "inline";
-  }
-  if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
-  } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
-  }
-
-  fixStepIndicator(n)
-}
-
-function nextPrev(n) {
-
-  var x = document.getElementsByClassName("tab");
-
-  if (n == 1 && !validateForm()) return false;
-
-  x[currentTab].style.display = "none";
-
-  currentTab = currentTab + n;
-
-  if (currentTab >= x.length) {
-      
-      var data = new FormData();
-      data.append('resume', document.getElementById('resume').files);
-
-      fetch(scriptURL, {method: 'POST', body: data })
-      .then(response => {
-        console.log('Success!', response)
-        span = document.getElementById("span");
-        nextBtn = document.getElementById("nextBtn");
-        prevBtn = document.getElementById("prevBtn");
-
-        span.style.display="none";
-        nextBtn.style.display="none";
-        prevBtn.style.display="none";
-
-        $("#success-message").attr("class", "alert alert-success alert-dismissible");
-        document.getElementById("message").innerText = "Thank you very much for your application! Please note that only successful candidates will be contacted";
-        $('.alert').show();
-      })
-      .catch(error => {
-        console.error('Error!', error.message)
-        $("#success-message").attr("class", "alert alert-danger alert-dismissible");
-        document.getElementById("message").innerText = "Error! Something went wrong";
-        $('.alert').show();
-      })
-
-      document.getElementById("regForm").submit();
-    
-    return false;
-  }
-
-  showTab(currentTab);
-}
-
-function validateForm() {
-
-  var x, y, i, valid = true;
-  x = document.getElementsByClassName("tab");
-  y = x[currentTab].querySelectorAll("input, textarea");
-
-  for (i = 0; i < y.length; i++) {
-
-    if (y[i].value == "") {
-
-      y[i].className += " invalid";
-
-      valid = false;
-    }
-  }
-
-  if (valid) {
-    document.getElementsByClassName("step")[currentTab].className += " finish";
-  }
-  if(currentTab == 3) {
-    valid = true;
-  }
-  return valid;
-}
-
-function fixStepIndicator(n) {
-
-  var i, x = document.getElementsByClassName("step");
-  for (i = 0; i < x.length; i++) {
-    x[i].className = x[i].className.replace(" active", "");
-  }
-
-  x[n].className += " active";
-}
-
-
     
 
     

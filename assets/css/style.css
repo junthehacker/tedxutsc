@@ -209,7 +209,8 @@ h2 {
 .home__featured-speakers {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: white;
+  background-color: black;
+  color: white;
   font-family: 'Montserrat', sans-serif; }
   .home__featured-speakers h2 {
     font-size: 15px;
@@ -220,7 +221,8 @@ h2 {
     text-align: center;
     font-weight: 700; }
 .home-marketing {
-  background-color: white;
+  background-color: black;
+  color: white;
   padding-top: 100px;
   padding-bottom: 30px;
   background-repeat: no-repeat;
@@ -319,7 +321,7 @@ h2 {
     .home-gallery__title__content {
       flex: 1 1 auto; }
     .home-gallery__title__left-btn, .home-gallery__title__right-btn {
-      background-color: white;
+      background-color: black;
       height: 50px;
       flex: 0 0 auto;
       width: 100px;
@@ -408,7 +410,8 @@ h2 {
   to {
     opacity: 1; } }
 .team {
-  background-color: white;
+  background-color: black;
+  color: white;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../../assets/wave-black.svg);
@@ -421,9 +424,12 @@ h2 {
     font-family: "Libre Franklin", sans-serif;
     font-size: 40px;
     font-weight: bold;
-    align-self: left;
+    text-align: center;
     padding-left: 20px;
     padding-right: 20px; }
+  .team__label_underline {
+    display: inline;
+    border-bottom: solid red; }
   .team__sub-section {
     font-family: "Montserrat", sans-serif;
     font-size: 15px;
@@ -439,7 +445,7 @@ h2 {
     padding-bottom: 50px; }
   .team__member-item {
     position: relative;
-    margin: 10px;
+    margin: 15px;
     transition: all ease 0.3s; }
     .team__member-item:hover {
       transform: scale(1.2);
@@ -450,16 +456,17 @@ h2 {
     bottom: 20px;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 13px;
     letter-spacing: 2px;
     color: white;
+    font-weight: bold;
     text-transform: uppercase; }
   .team__member-position {
     display: block;
     font-family: "Libre Franklin", sans-serif;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 20px;
     letter-spacing: 1px;
     padding-top: 5px;
@@ -476,6 +483,11 @@ h2 {
     bottom: 0;
     left: 0;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 11%, black 47%, black 65%, black 92%, black 96%); }
+  .team__name-center {
+    padding: 20px;
+    padding-bottom: 15px;
+    height: auto;
+    text-align: center; }
   .team__section2 {
     background-color: white;
     background-repeat: no-repeat;
@@ -609,8 +621,6 @@ h2 {
     opacity: 0; } }
 .footer {
   background-color: black;
-  padding-top: 80px;
-  padding-bottom: 80px;
   color: white;
   font-family: "Montserrat", sans-serif; }
   .footer .container {
@@ -624,7 +634,8 @@ h2 {
   .footer__contact {
     display: flex;
     padding-top: 20px;
-    padding-bottom: 10px; }
+    padding-bottom: 10px;
+    justify-content: center; }
     .footer__contact ul {
       flex: 0.5;
       margin: 0;
@@ -636,7 +647,7 @@ h2 {
   .footer__copyright {
     flex: 0.5;
     font-size: 13px;
-    text-align: right;
+    text-align: center;
     opacity: 0.5; }
     .footer__copyright small {
       color: black;
