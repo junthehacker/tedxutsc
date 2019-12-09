@@ -144,6 +144,8 @@ h2 {
     .feature-row__content p {
       font-family: 'Fira Sans', sans-serif;
       padding-top: 15px; }
+  .feature-row__social-media a {
+    padding-left: 20px; }
 
 .sub-section-label {
   font-family: "Montserrat", sans-serif;
@@ -673,6 +675,10 @@ h2 {
         .footer__nav ul li a:visited,
         .footer__nav ul li a:active {
           color: white; }
+  .footer__mailing-list {
+    border-bottom: solid red; }
+  .footer__mailing-list-items div input {
+    margin: 10px; }
 
 @media screen and (max-width: 769px) {
   .footer__nav ul {
