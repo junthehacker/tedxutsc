@@ -11,7 +11,7 @@
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Montserrat:400,500,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="/assets/css/style.css?version=fdad07a_20191218_183223">
+    <link rel="stylesheet" href="/assets/css/style.css?version=d4c53c4_20191223_021144">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2020 Team Applications - TEDxUTSC </title>
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.png">
@@ -161,26 +161,26 @@
                 </div>
             </div>
             <div class="footer__mailing-list-items">
-                <form accept-charset="UTF-8">
+                <form accept-charset="UTF-8" name="submit-to-mailing-list">
                     <div class="row" >
                         <div class="col">
-                                <input type="text" name="first name" placeholder="first name" size="20" class="form-control" disabled>
+                                <input type="text" id="fname" name="first name" placeholder="first name" size="20" class="form-control" required>
                         </div>
                         <div class="col">
-                                <input type="text" name="last name" placeholder="last name" size="20" class="form-control" disabled>
+                                <input type="text" id="lname" name="last name" placeholder="last name" size="20" class="form-control" required>
                         </div>
                         <div class="col">
-                                <input type="email" name="email" placeholder="email" size="20" class="form-control" disabled>
+                                <input type="email" id="email" name="email" placeholder="email" size="20" class="form-control"  required>
                         </div>   
                     </div>
                     <div style="text-align: center;">
-                        <input type="submit" name="submit" class="btn btn-primary" disabled>
+                        <input type="submit" name="submit" class="btn btn-primary" >
                     </div>  
                 </form>
             </div>
             <div class="col-lg-5">
                 <div class="footer__copyright">
-                    <small>production fdad07a_20191218_183223</small>
+                    <small>production d4c53c4_20191223_021144</small>
                         &copy; TEDXUTSC 2018
                 </div>
             </div>
@@ -221,7 +221,7 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
 
 `, 'color: red; font-weight: bold;');
 
-console.log("You are running in production, build fdad07a_20191218_183223");
+console.log("You are running in production, build d4c53c4_20191223_021144");
 console.log("Want to help us out? https://github.com/junthehacker/tedxutsc");
     // Hide the loading screen after 2 seconds
 (function() {
@@ -240,6 +240,33 @@ console.log("Want to help us out? https://github.com/junthehacker/tedxutsc");
     });
 })();
 
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyQoOrRhtBe6EszGXC517GEug52Pt6_YFxboEKwSb4qXg22br7N/exec';
+const form = document.forms['submit-to-mailing-list'];
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, {method: 'POST', mode: 'no-cors', body: new FormData(form)})
+        .then(res => {
+            if(res.status < 400){
+                return;
+            } else {
+                throw new Error('Fail');
+            }
+        })
+        .then(() => {
+            document.getElementById("fname").value = "";
+            document.getElementById("lname").value = "";
+            document.getElementById("email").value = "";
+        }).catch(() => {
+            $("#success-message").attr("class", "alert alert-danger alert-dismissible");
+            document.getElementById("message").innerText = "Error!";
+            $('.alert').show();
+        });
+}); 
+
+function hideMessage() {
+    $('.' + $('.close').attr('data-hide')).hide();
+}
 
     
 
