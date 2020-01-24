@@ -178,7 +178,9 @@ h2 {
   position: relative;
   width: 100%;
   margin: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  display: block;
+  text-align: center; }
   .home__header__background {
     margin-top: -300px;
     opacity: 0;
@@ -462,9 +464,18 @@ h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 18px;
-    line-height: 13px;
-    letter-spacing: 2px;
+    line-height: 20px;
+    letter-spacing: 1px;
     color: white;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .team__bio-name {
+    bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 20px;
+    letter-spacing: 3px;
     font-weight: bold;
     text-transform: uppercase; }
   .team__member-position {
@@ -477,6 +488,15 @@ h2 {
     padding-top: 5px;
     left: 10px;
     color: white; }
+  .team__bio-position {
+    display: block;
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    padding-top: 5px;
+    left: 10px; }
   .team__image {
     position: relative; }
   .team__name-gradient {
@@ -686,10 +706,10 @@ h2 {
     .footer__nav ul li {
       display: block; } }
 .speaker-modal .modal-dialog .modal-content {
-  background-image: url(../wave-black.svg);
-  background-size: cover;
+  background-image: url(../x.png);
+  background-size: 100px;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: 95% 5%;
   border-radius: 0; }
   .speaker-modal .modal-dialog .modal-content .speaker-image {
     width: 100%; }
