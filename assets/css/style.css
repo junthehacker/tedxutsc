@@ -178,9 +178,7 @@ h2 {
   position: relative;
   width: 100%;
   margin: 0;
-  overflow: hidden;
-  display: block;
-  text-align: center; }
+  overflow: hidden; }
   .home__header__background {
     margin-top: -300px;
     opacity: 0;
@@ -188,7 +186,7 @@ h2 {
     position: absolute;
     left: 0;
     top: 30px;
-    width: 100%;
+    width: 50%;
     z-index: 2; }
   .home__header__title {
     padding: 40px;
@@ -304,6 +302,13 @@ h2 {
   .sponsors img {
     margin: 20px;
     max-width: 80% !important; }
+
+.utsponsors {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto; }
 
 @media screen and (max-width: 450px) {
   .home__header__title {
